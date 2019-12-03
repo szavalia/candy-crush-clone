@@ -37,7 +37,7 @@ public class CandyFrame extends VBox {
 			@Override
 			public void gridUpdated() {
 				Timeline timeLine = new Timeline();
-				Duration frameGap = Duration.millis(100);
+				Duration frameGap = Duration.millis(20);
 				Duration frameTime = Duration.ZERO;
 				for (int i = game().getSize() - 1; i >= 0; i--) {
 					for (int j = game().getSize() - 1; j >= 0; j--) {
@@ -46,8 +46,15 @@ public class CandyFrame extends VBox {
 						Cell cell = CandyFrame.this.game.get(i, j);
 						Element element = cell.getContent();
 						Image image = images.getImage(element);
-						timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, null)));
-						timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, image)));
+
+						System.out.println(cell.golden());
+						if ( cell.isBreakeable() )
+						if(cell.golden()){
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setGoldenImage(finalI, finalJ, image)));
+						}
+						else{
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, image)));
+						}
 					}
 					frameTime = frameTime.add(frameGap);
 				}

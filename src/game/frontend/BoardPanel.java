@@ -29,9 +29,9 @@ public class BoardPanel extends TilePane {
 		cells[row][column].setImage(image);
 
 	}
-	public void setJailed Image( int row , int column , Image image , Image jail){
+	/*public void setJailed Image( int row , int column , Image image , Image jail){
 
-	};
+	};*/
 	public void setGoldenImage( int row, int column, Image image){
 		cells[row][column].setImage(image);
 		Light.Distant spotLight = new Light.Distant();

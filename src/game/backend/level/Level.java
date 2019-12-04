@@ -50,4 +50,7 @@ public abstract class Level extends Grid {
             }
         }
     }
+    public boolean tryMove(int i1, int j1, int i2, int j2){
+        return super.tryMove(i1,j1,i2,j2);
+    }
 }

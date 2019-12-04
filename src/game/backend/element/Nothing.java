@@ -1,7 +1,16 @@
 package game.backend.element;
 
-public class Nothing extends Element {
-	
+public class Nothing extends BreakeableElement{
+
+	public Nothing(){
+		this.content = null;
+	}
+
+	@Override
+	public Element drop(){
+		return this;
+	};
+
 	@Override
 	public boolean isMovable() {
 		return false;

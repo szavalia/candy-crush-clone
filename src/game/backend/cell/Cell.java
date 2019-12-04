@@ -1,12 +1,13 @@
 package game.backend.cell;
 
 import game.backend.Grid;
+import game.backend.element.BreakeableElement;
 import game.backend.element.Element;
 import game.backend.element.Nothing;
 import game.backend.move.Direction;
 
 public class Cell {
-	
+	private boolean golden;
 	private Grid grid;
 	private Cell[] around = new Cell[Direction.values().length];
 	private Element content;
@@ -14,6 +15,7 @@ public class Cell {
 	public Cell(Grid grid) {
 		this.grid = grid;
 		this.content = new Nothing();
+		this.golden = false;
 	}
 	
 	public void setAround(Cell up, Cell down, Cell left, Cell right) {
@@ -48,6 +50,14 @@ public class Cell {
 				expandExplosion(explosionCascade); 
 			}
 			this.content = new Nothing();
+		}
+		else
+			{
+			if(!content.isSolid())
+			{
+				BreakeableElement aux = (BreakeableElement) this.content;
+				this.content = aux.drop();
+			}
 		}
 	}
 	
@@ -87,7 +97,11 @@ public class Cell {
 		} 
 		return false;
 	}
-	
+
+	public void goldenOn(){
+		golden = true;
+	}
+	public boolean golden() { return golden; }
 	public void setContent(Element content) {
 		this.content = content;
 	}

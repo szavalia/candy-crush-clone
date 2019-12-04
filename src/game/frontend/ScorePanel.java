@@ -13,11 +13,7 @@ public class ScorePanel extends BorderPane {
 		scoreLabel = new Label("0");
 		scoreLabel.setAlignment(Pos.CENTER);
 		scoreLabel.setStyle("-fx-font-size: 24");
-		setCenter(scoreLabel);
 	}
 	
-	public void updateScore(String text) {
-		scoreLabel.setText(text);
-	}
-
+	public void updateScore(String text) { scoreLabel.setText(text); }
 }

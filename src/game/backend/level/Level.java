@@ -7,8 +7,8 @@ import game.backend.cell.Cell;
 import game.backend.element.Wall;
 
 public abstract class Level extends Grid {
-    private Cell wallCell;
-    private Cell candyGenCell;
+    protected Cell wallCell;
+    protected Cell candyGenCell;
 
     @Override
     protected abstract GameState newState();

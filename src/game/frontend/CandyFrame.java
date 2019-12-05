@@ -79,6 +79,8 @@ public class CandyFrame extends VBox {
 						}
 					}
 					scorePanel.updateScore(message);
+					//scorePanel.updateMove(new Integer(game.getMoves()).toString());
+					//scorePanel.updateAux(new Integer(game.getAux()).toString());
 					lastPoint = null;
 				}
 			}

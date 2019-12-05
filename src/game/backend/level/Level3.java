@@ -4,27 +4,23 @@ import game.backend.GameState;
 import game.backend.cell.CandyGeneratorCell;
 import game.backend.cell.CandyGeneratorCellExtended;
 import game.backend.cell.Cell;
-import game.backend.element.Cherry;
-import game.backend.element.Hazelnut;
-import game.backend.element.Wall;
+import game.backend.element.*;
 
 public class Level3 extends Level {
-    private final int WIN_FRUITS = 5;
-    private final int MAX_FRUITS = 10;
+    private final int CANT_FRUITS = 5;
     private final int MAX_MOVES = 20;
-    private int winFruits = 0;
     private CandyGeneratorCellExtended candyGenCellExt;
 
     @Override
     protected GameState newState() {
-        return new Level3State(WIN_FRUITS, MAX_MOVES);
+        return new Level3State();
     }
 
     @Override
     protected void fillCells() {
         wallCell = new Cell(this);
         wallCell.setContent(new Wall());
-        candyGenCellExt = new CandyGeneratorCellExtended(this, MAX_FRUITS);
+        candyGenCellExt = new CandyGeneratorCellExtended(this, CANT_FRUITS);
 
         //corners
         g()[0][0].setAround(candyGenCellExt, g()[1][0], wallCell, g()[0][1]);
@@ -54,35 +50,42 @@ public class Level3 extends Level {
                 g()[i][j].setAround(g()[i - 1][j], g()[i + 1][j], g()[i][j - 1], g()[i][j + 1]);
             }
         }
+        for(int j = 0; j < SIZE; j++){
+            int i = (int) (Math.random() * CandyColor.values().length);
+            g()[SIZE-2][j].setContent(new Candy(CandyColor.values()[i])); //los del piso siempre tienen que ser caramelos
+        }
     }
+
     @Override
     public boolean tryMove(int i1, int j1, int i2, int j2) {
         boolean ret;
-        if (ret = super.tryMove(i1, j1, i2, j2)) {
+        if (get(i1, j1) instanceof Hazelnut || get(i2, j2) instanceof Hazelnut) {
+            return false;
+        }
+        else if(get(i1, j1) instanceof Cherry || get(i2, j2) instanceof Cherry) {
+            return false;
+        } //si es una fruta, no lo muevas
+        if (ret = super.tryMove(i1, j1, i2, j2)) { // es un movimiento valido
             state().addMove();
-            if ((i1 == SIZE - 1 || i2 == SIZE - 1) && (get(i1,j1) instanceof Cherry || get(i2,j2) instanceof Hazelnut)){
-                winFruits++;
-            }
+
         }
         return ret;
     }
         private class Level3State extends GameState{
-        private long maxMoves;
-        private int winFruit;
+        private int wonFruits;
 
-        public Level3State(int winFruit, long maxMoves) {
-            this.maxMoves = maxMoves;
-            this.winFruit = winFruit;
+        public Level3State() {
+            this.wonFruits = 0;
         }
 
         @Override
         public boolean gameOver() {
-            return maxMoves < getMoves();
+            return MAX_MOVES < getMoves();
         }
 
         @Override
         public boolean playerWon() {
-            return winFruit < winFruits;
+            return wonFruits == CANT_FRUITS;
         }
     }
 }

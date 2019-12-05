@@ -1,10 +1,7 @@
 package game.backend.cell;
 
 import game.backend.Grid;
-import game.backend.element.Cherry;
-import game.backend.element.Element;
-import game.backend.element.Hazelnut;
-import game.backend.element.Nothing;
+import game.backend.element.*;
 import game.backend.move.Direction;
 
 public class Cell {
@@ -42,7 +39,7 @@ public class Cell {
 	}
 	
 	public void clearContent() {
-		if (content.isMovable() && !(content instanceof Hazelnut) && !(content instanceof Cherry) ) {
+		if (content.isMovable() && !(content instanceof Hazelnut || content instanceof Cherry)){
 			Direction[] explosionCascade = content.explode();
 			grid.cellExplosion(content);
 			this.content = new Nothing();
@@ -51,7 +48,14 @@ public class Cell {
 			}
 			this.content = new Nothing();
 		}
+		if(this.content instanceof Fruit){
+			if((this.around[Direction.DOWN.ordinal()].content) instanceof Wall){
+				this.content = new Nothing();
+				System.out.println("BORRE UNA FRUTA");
+			}
+		}
 	}
+
 	
 	private void expandExplosion(Direction[] explosion) {
 		for(Direction d: explosion) {

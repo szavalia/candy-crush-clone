@@ -1,14 +1,11 @@
 package game.backend.element;
 
-public class Cherry extends Element {
+public class Cherry extends Fruit {
 
     @Override
     public String getKey() {
         return "Cherry";
     }
 
-    @Override
-    public boolean isMovable() {
-        return true;
-    }
+
 }

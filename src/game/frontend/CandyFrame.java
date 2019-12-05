@@ -3,8 +3,10 @@ package game.frontend;
 import game.backend.CandyGame;
 import game.backend.GameListener;
 import game.backend.cell.Cell;
+import game.backend.element.Cherry;
 import game.backend.element.Element;
 
+import game.backend.element.Hazelnut;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Point2D;
@@ -12,6 +14,8 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
+
+import static game.backend.Grid.SIZE;
 
 public class CandyFrame extends VBox {
 

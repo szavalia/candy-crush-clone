@@ -82,7 +82,9 @@ public class CandyFrame extends VBox {
 							message = message + " Finished - Loser !";
 						}
 					}
-					scorePanel.updateScore("", message, ""); //cambio updateScore para tomar en cuenta los 3 campos
+					scorePanel.updateScore(message);
+					scorePanel.updateMove(new Integer(game.getMoves()).toString());
+					scorePanel.updateAux(new Integer(game.getAux()).toString());
 					lastPoint = null;
 				}
 			}

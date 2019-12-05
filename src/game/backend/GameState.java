@@ -4,6 +4,7 @@ public abstract class GameState {
 	
 	private long score = 0;
 	private int moves = 0;
+	private int aux = 0;
 	
 	public void addScore(long value) {
 		this.score = this.score + value;
@@ -24,5 +25,13 @@ public abstract class GameState {
 	public abstract boolean gameOver();
 	
 	public abstract boolean playerWon();
+
+	public int getAux(){
+		return aux;
+	}
+
+	public void addAux(int value){
+		aux+=value;
+	}
 
 }

@@ -74,14 +74,14 @@ public class Level3 extends Level {
     }
     private void checkFruits(){
         int j;
-        long collectedFruits = 0;
+        int collectedFruits = 0;
         for(j = 0; j < SIZE; j++){
             if(get(SIZE-2, j) instanceof Fruit){
                 g()[SIZE-2][j].clearContent();
                 collectedFruits++;
             }
         }
-        state().addScore(collectedFruits);
+        state().addAux(collectedFruits);
     }
         private class Level3State extends GameState{
         private int maxMoves;
@@ -91,7 +91,6 @@ public class Level3 extends Level {
                 this.maxMoves = maxMoves;
                 this.requiredScore = requiredScore;
         }
-
 
         @Override
         public boolean gameOver() {

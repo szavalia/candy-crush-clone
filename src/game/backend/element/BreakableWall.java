@@ -1,7 +1,8 @@
 package game.backend.element;
 
-public class BreakableWall extends BreakableElement{
+public class BreakableWall extends BreakableElement {
 
     @Override
-    public String getkey(){return "BREAKABLEWALL";}
+    public String getKey(){return "BREAKABLEWALL";}
+
 }

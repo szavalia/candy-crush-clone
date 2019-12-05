@@ -51,21 +51,28 @@ public class Level3 extends Level {
                 g()[i][j].setAround(g()[i - 1][j], g()[i + 1][j], g()[i][j - 1], g()[i][j + 1]);
             }
         }
+    }
+
+    @Override
+    public void initialize() {
+        super.initialize();
         for(int j = 0; j < SIZE; j++){
-            int i = (int) (Math.random() * CandyColor.values().length);
-            g()[SIZE-2][j].setContent(new Candy(CandyColor.values()[i])); //los del piso siempre tienen que ser caramelos
+            g()[SIZE-1][j].setContent(new Cherry()); //los del piso siempre tienen que ser caramelos
+            if(g()[SIZE-1][j].getContent() instanceof Fruit){
+                int i = (int) (Math.random() * CandyColor.values().length);
+                g()[SIZE-1][j].setContent(new Candy(CandyColor.values()[i]));
+                candyGenCellExt.decreaseFruits();
+            }
         }
+        checkFruits();
     }
 
     @Override
     public boolean tryMove(int i1, int j1, int i2, int j2) {
         boolean ret;
-        if (get(i1, j1) instanceof Hazelnut || get(i2, j2) instanceof Hazelnut) {
+        if (get(i1, j1) instanceof Fruit || get(i2, j2) instanceof Fruit) {
             return false;
-        }
-        else if(get(i1, j1) instanceof Cherry || get(i2, j2) instanceof Cherry) {
-            return false;
-        } //si es una fruta, no lo muevas
+        }//si es una fruta, no lo muevas
         if (ret = super.tryMove(i1, j1, i2, j2)) { // es un movimiento valido
             state().addMove();
         }
@@ -76,12 +83,13 @@ public class Level3 extends Level {
         int j;
         int collectedFruits = 0;
         for(j = 0; j < SIZE; j++){
-            if(get(SIZE-2, j) instanceof Fruit){
-                g()[SIZE-2][j].clearContent();
+            if(get(SIZE-1, j) instanceof Fruit){
+                g()[SIZE-1][j].clearContent();
                 collectedFruits++;
             }
         }
         state().addAux(collectedFruits);
+        fallElements();
     }
         private class Level3State extends GameState{
         private int maxMoves;

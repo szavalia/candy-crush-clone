@@ -7,13 +7,14 @@ import game.backend.cell.Cell;
 import game.backend.element.*;
 
 public class Level3 extends Level {
-    private final int CANT_FRUITS = 5;
+    private final int CANT_FRUITS = 1;
     private final int MAX_MOVES = 20;
     private CandyGeneratorCellExtended candyGenCellExt;
 
     @Override
     protected GameState newState() {
-        return new Level3State();
+        return new Level3State(MAX_MOVES, CANT_FRUITS);
+
     }
 
     @Override
@@ -67,25 +68,39 @@ public class Level3 extends Level {
         } //si es una fruta, no lo muevas
         if (ret = super.tryMove(i1, j1, i2, j2)) { // es un movimiento valido
             state().addMove();
-
         }
+        checkFruits(); //fijate si me quedaron frutas al fondo
         return ret;
     }
-        private class Level3State extends GameState{
-        private int wonFruits;
-
-        public Level3State() {
-            this.wonFruits = 0;
+    private void checkFruits(){
+        int j;
+        long collectedFruits = 0;
+        for(j = 0; j < SIZE; j++){
+            if(get(SIZE-2, j) instanceof Fruit){
+                g()[SIZE-2][j].clearContent();
+                collectedFruits++;
+            }
         }
+        state().addScore(collectedFruits);
+    }
+        private class Level3State extends GameState{
+        private int maxMoves;
+        private long requiredScore;
+        //score es la cantidad de frutas que baje, esto me queda exactamente igual al del level1!
+        public Level3State(int maxMoves, int requiredScore) {
+                this.maxMoves = maxMoves;
+                this.requiredScore = requiredScore;
+        }
+
 
         @Override
         public boolean gameOver() {
-            return MAX_MOVES < getMoves();
-        }
+            return playerWon() || maxMoves < getMoves();
+            }
 
         @Override
         public boolean playerWon() {
-            return wonFruits == CANT_FRUITS;
+            return getScore() >= requiredScore;
         }
     }
 }

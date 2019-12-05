@@ -48,10 +48,9 @@ public class Cell {
 			}
 			this.content = new Nothing();
 		}
-		if(this.content instanceof Fruit){
-			if((this.around[Direction.DOWN.ordinal()].content) instanceof Wall){
-				this.content = new Nothing();
-				System.out.println("BORRE UNA FRUTA");
+		if(content.isMovable() && this.content instanceof Fruit){ //si es una fruta
+			if((this.around[Direction.DOWN.ordinal()].content) instanceof Wall){ //y abajo tiene una Wall
+				this.content = new Nothing(); //borrala
 			}
 		}
 	}

@@ -4,6 +4,9 @@ import game.backend.CandyGame;
 import game.backend.level.Level1;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class GameApp extends Application {
@@ -13,13 +16,47 @@ public class GameApp extends Application {
 	}
 
 	@Override
-	public void start(Stage primaryStage) {
-		CandyGame game = new CandyGame(Level1.class);
+	public void start(Stage primaryStage){
+		primaryStage.setTitle("Menu de inicio");
+		Button level1 = new Button("Level 1");
+		Button level2 = new Button("Level 2");
+		Button level3 = new Button("Level 3");
+		Label label1 = new Label("Menu de inicio. elija el nivel:");
+
+		VBox layout = new VBox(20);
+		VBox layout2 = new VBox();
+		layout.getChildren().addAll(label1, level1, level2, level3);
+
+		Scene scene = new Scene(layout, 300, 250);
+		Scene scene2 = new Scene(layout2);
+
+		Stage secStage = new Stage();
+		level1.setOnAction(e -> {secStage.setScene(scene2);
+			secStage.setTitle("Level 1");
+			startSpecial(secStage, Level1.class);
+		});
+
+		//cuando tengamos level 2 saquen esto de comment :)
+//		level2.setOnAction(e -> {secStage.setScene(scene2);
+//			secStage.setTitle("Level 2");
+//			startSpecial(secStage, Level2.class);
+//		});
+
+		//Cuando tengamos level 3 saquen esto de comment :)
+//        level3.setOnAction(e -> {secStage.setScene(scene2);
+//            startSpecial(secStage, Level3.class);
+//        });
+
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
+
+	public void startSpecial(Stage primaryStage, Class clase) {
+		CandyGame game = new CandyGame(clase);
 		CandyFrame frame = new CandyFrame(game);
 		Scene scene = new Scene(frame);
 		primaryStage.setResizable(false);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
-
 }

@@ -39,7 +39,7 @@ public class Cell {
 	}
 	
 	public void clearContent() {
-		if (content.isMovable() && !(content instanceof Hazelnut || content instanceof Cherry)){
+		if (content.isMovable() && !(content instanceof Fruit)){
 			Direction[] explosionCascade = content.explode();
 			grid.cellExplosion(content);
 			this.content = new Nothing();

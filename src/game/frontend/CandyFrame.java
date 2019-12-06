@@ -62,7 +62,12 @@ public class CandyFrame extends VBox {
 							Image image = images.getImage(new Candy(((JailedCandy) element).getColor()));
 							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setJailImage(finalI, finalJ, image, jail)));
 						}
-						else {
+						else if(cell.golden()){
+							Image image = images.getImage(element);
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setGoldenImage(finalI, finalJ, image)));
+
+						}
+						else{
 							Image image = images.getImage(element);
 							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, image)));
 						}

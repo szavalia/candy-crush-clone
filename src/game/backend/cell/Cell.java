@@ -45,24 +45,26 @@ public class Cell {
 	
 	public void clearContent() {
 
-        if ( !(content instanceof Fruit)) {
-            if ((content.isMovable() || !content.canExplode())) {
-                Direction[] explosionCascade = content.explode();
-                grid.cellExplosion(content);
-                this.content = new Nothing();
-                if (explosionCascade != null) {
-                    expandExplosion(explosionCascade);
-                }
-				expandExplosion(explosionCascade);
-                this.content = new Nothing();
-		} else if (content.isBreakable()) {
-			BreakableElement aux = (BreakableElement) this.content;
-			this.content = aux.drop();
-            }
-        }
-		if(content.isMovable() && this.content instanceof Fruit){ //si es una fruta
-			if((this.around[Direction.DOWN.ordinal()].content) instanceof Wall){ //y abajo tiene una Wall
-				this.content = new Nothing(); //borrala
+		if (!(content instanceof Fruit)) {
+			if ((content.isMovable() || !content.canExplode())) {
+				Direction[] explosionCascade = content.explode();
+				grid.cellExplosion(content);
+				this.content = new Nothing();
+				if (explosionCascade != null) {
+					expandExplosion(explosionCascade);
+				}
+				this.content = new Nothing();
+			} else if (content.isBreakable()) {
+				BreakableElement aux = (BreakableElement) this.content;
+				this.content = aux.drop();
+			}
+		}
+		else {
+			while (content instanceof Fruit) {
+				if ((this.around[Direction.DOWN.ordinal()].content) instanceof Wall) { //y abajo tiene una Wall
+					this.content = new Nothing(); //borrala
+					fallUpperContent();
+				}
 			}
 		}
 	}

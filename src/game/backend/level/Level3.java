@@ -6,7 +6,7 @@ import game.backend.cell.Cell;
 import game.backend.element.*;
 
 public class Level3 extends Level {
-    private final int CANT_FRUITS = 10;
+    private final int CANT_FRUITS = 2;
     private final int MAX_MOVES = 20;
     private CandyGeneratorCellExtended candyGenCellExt;
 
@@ -56,7 +56,6 @@ public class Level3 extends Level {
     public void initialize() {
         super.initialize();
         for(int j = 0; j < SIZE; j++){
-            g()[SIZE-1][j].setContent(new Cherry()); //los del piso siempre tienen que ser caramelos
             if(g()[SIZE-1][j].getContent() instanceof Fruit){
                 int i = (int) (Math.random() * CandyColor.values().length);
                 g()[SIZE-1][j].setContent(new Candy(CandyColor.values()[i]));

@@ -30,15 +30,12 @@ public class FruitMove extends Move {
            fi = i1;
            fj = j1;
        }
-        System.out.println(f == null);
        return f != null;
     }
 
     @Override
     public void removeElements() {
-        System.out.println("entre al metodo");
         if (f != null) {
-            System.out.println("che entre");
             detector.removeFigure(fi, fj, f);
         }
     }

@@ -10,6 +10,8 @@ public abstract class Level extends Grid {
     private Cell wallCell;
     private Cell candyGenCell;
 
+
+
     @Override
     protected abstract GameState newState();
 

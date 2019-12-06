@@ -10,6 +10,14 @@ public class Level2 extends Level {
     private static int MAX_MOVES = 20;
     private Boolean[][] golden = new Boolean[2][SIZE];
 
+    @Override
+    protected void fillCells() {
+        super.fillCells();
+        for (int i = 0; i < SIZE; i++){
+            golden[0][i] = false;
+            golden[1][i] = false;
+        }
+    }
 
     @Override
     protected GameState newState() {
@@ -51,7 +59,6 @@ public class Level2 extends Level {
         private long maxMoves;
         private long actualGoldens;
         public Level2State(int maxMoves ) {
-
             this.maxMoves = maxMoves;
         }
 

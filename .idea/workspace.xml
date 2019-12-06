@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f89715a7-0341-4168-bab5-2c72e370de76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/TPE-POO.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/CandyGame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/Checkpoint.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/Figure.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/FigureDetector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/GameListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/GameState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/Grid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/CandyGeneratorCell.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/Cell.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Bomb.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/BreakableElement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/BreakableWall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Candy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/CandyColor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Element.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/HorizontalStripedCandy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Nothing.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/VerticalStripedCandy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Wall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/WrappedCandy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level1$Level1State.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4$Level4State.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombMove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombStrippedMove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombWrappedMove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/CandyMove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/Direction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/Move.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/MoveMaker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoBombMove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoStripedMove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoWrappedMove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/WrappedStripedMove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/AppMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/BoardPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/GameApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ImageManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ScorePanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/blueCandy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/blueHStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/blueVStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/blueWrapped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/bomb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/cherry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/gap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/greenCandy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/greenHStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/greenVStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/greenWrapped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/hazelnut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/jail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/jelly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/nothing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/orangeCandy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/orangeHStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/orangeVStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/orangeWrapped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/purpleCandy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/purpleHStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/purpleVStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/purpleWrapped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/redCandy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/redHStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/redVStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/redWrapped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/wall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/yellowCandy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/yellowHStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/yellowVStripped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TPE-POO/images/yellowWrapped.png" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Level4" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\val-r\OneDrive\Documentos\GitHub\TPE-POO\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Ua6dDQ7zuuaQyGhwQBJgbxLomB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="GameApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game.frontend.GameApp" />
+      <module name="TPE-POO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.frontend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GameApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f89715a7-0341-4168-bab5-2c72e370de76" name="Default Changelist" comment="" />
+      <created>1575582384260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575582384260</updated>
+      <workItem from="1575582385447" duration="54000" />
+      <workItem from="1575582444709" duration="6819000" />
+    </task>
+    <task id="LOCAL-00001" summary="Agrega breakableelement, sigo con breakwall">
+      <created>1575584512887</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575584512887</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Agrega breakableelement, sigo con breakwall">
+      <created>1575584538803</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575584538803</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ya funcionan las walls y el front">
+      <created>1575592450225</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575592450225</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Agrega breakableelement, sigo con breakwall" />
+    <MESSAGE value="Ya funcionan las walls y el front" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya funcionan las walls y el front" />
+  </component>
+</project>

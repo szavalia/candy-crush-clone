@@ -34,4 +34,6 @@ public abstract class GameState {
 		aux = value;
 	}
 
+	public void updateAux(){};
+
 }

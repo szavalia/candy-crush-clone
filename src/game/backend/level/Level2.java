@@ -14,7 +14,6 @@ public class Level2 extends Level {
     @Override
     protected void fillCells() {
         super.fillCells();
-        System.out.println("llegue a generar la celda");
         for (int i = 0; i < SIZE; i++){
             golden[0][i] = false;
             golden[1][i] = false;

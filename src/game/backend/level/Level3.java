@@ -1,7 +1,6 @@
 package game.backend.level;
 
 import game.backend.GameState;
-import game.backend.cell.CandyGeneratorCell;
 import game.backend.cell.CandyGeneratorCellExtended;
 import game.backend.cell.Cell;
 import game.backend.element.*;
@@ -70,9 +69,9 @@ public class Level3 extends Level {
     @Override
     public boolean tryMove(int i1, int j1, int i2, int j2) {
         boolean ret;
-        if (get(i1, j1) instanceof Fruit || get(i2, j2) instanceof Fruit) {
-            return false;
-        }//si es una fruta, no lo muevas
+        //if (get(i1, j1) instanceof Fruit || get(i2, j2) instanceof Fruit) {
+          //  return false;
+        //}//si es una fruta, no lo muevas
         if (ret = super.tryMove(i1, j1, i2, j2)) { // es un movimiento valido
             state().addMove();
         }

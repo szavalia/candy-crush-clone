@@ -1,7 +1,6 @@
 package game.backend.cell;
 
 import game.backend.Grid;
-import game.backend.element.BreakeableElement;
 import game.backend.element.Element;
 import game.backend.element.Nothing;
 import game.backend.move.Direction;
@@ -47,17 +46,9 @@ public class Cell {
 			grid.cellExplosion(content);
 			this.content = new Nothing();
 			if (explosionCascade != null) {
-				expandExplosion(explosionCascade); 
+				expandExplosion(explosionCascade);
 			}
 			this.content = new Nothing();
-		}
-		else
-			{
-			if(!content.isSolid())
-			{
-				BreakeableElement aux = (BreakeableElement) this.content;
-				this.content = aux.drop();
-			}
 		}
 	}
 	

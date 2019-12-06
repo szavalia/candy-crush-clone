@@ -43,6 +43,7 @@ public class CandyFrame extends VBox {
 					for (int j = game().getSize() - 1; j >= 0; j--) {
 						int finalI = i;
 						int finalJ = j;
+						System.out.printf("%d %d", finalI, finalJ);
 						Cell cell = CandyFrame.this.game.get(i, j);
 						Element element = cell.getContent();
 						Image image = images.getImage(element);

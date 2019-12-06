@@ -21,10 +21,7 @@ public class CandyGame implements GameListener {
 			System.out.println("ERROR AL INICIAR");
 		}
 		state = grid.createState();
-		if(grid instanceof Level3){
-			Level3 aux = (Level3)grid;
-			aux.initialize();
-		}
+		grid.initialize();
 		addGameListener(this);
 	}
 

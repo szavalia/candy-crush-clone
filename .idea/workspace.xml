@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f89715a7-0341-4168-bab5-2c72e370de76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombStrippedMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombStrippedMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombWrappedMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombWrappedMove.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/CandyGeneratorCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/CandyGeneratorCell.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/CandyMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/CandyMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/Move.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/Move.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoBombMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoBombMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoStripedMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoStripedMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoWrappedMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoWrappedMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/WrappedStripedMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/WrappedStripedMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/element/JailedCandy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/element/JailedCandy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/level/Level5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/level/Level5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/BombMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/BombMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/BombStrippedMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/BombStrippedMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/BombWrappedMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/BombWrappedMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/CandyMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/CandyMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/TwoBombMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/TwoBombMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/TwoStripedMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/TwoStripedMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/TwoWrappedMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/TwoWrappedMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/move/WrappedStripedMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/WrappedStripedMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/frontend/CandyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/frontend/CandyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/frontend/ImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/frontend/ImageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ImageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ImageManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/backend/cell/CandyGeneratorCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/cell/CandyGeneratorCell.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575582384260</updated>
       <workItem from="1575582385447" duration="54000" />
-      <workItem from="1575582444709" duration="22866000" />
+      <workItem from="1575582444709" duration="23611000" />
     </task>
     <task id="LOCAL-00001" summary="Agrega breakableelement, sigo con breakwall">
       <created>1575584512887</created>
@@ -165,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575609069707</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ya es final">
+      <created>1575644708150</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575644708150</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +178,7 @@
     <MESSAGE value="Agrega breakableelement, sigo con breakwall" />
     <MESSAGE value="Ya funcionan las walls y el front" />
     <MESSAGE value="final" />
-    <option name="LAST_COMMIT_MESSAGE" value="final" />
+    <MESSAGE value="Ya es final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya es final" />
   </component>
 </project>

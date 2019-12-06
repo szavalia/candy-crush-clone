@@ -6,7 +6,6 @@ import game.backend.cell.Cell;
 import game.backend.element.BreakableElement;
 import game.backend.element.Candy;
 import game.backend.element.Element;
-
 import game.backend.element.JailedCandy;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -14,6 +13,7 @@ import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 public class CandyFrame extends VBox {
@@ -40,7 +40,7 @@ public class CandyFrame extends VBox {
 			@Override
 			public void gridUpdated() {
 				Timeline timeLine = new Timeline();
-				Duration frameGap = Duration.millis(100);
+				Duration frameGap = Duration.millis(50);
 				Duration frameTime = Duration.ZERO;
 				for (int i = game().getSize() - 1; i >= 0; i--) {
 					for (int j = game().getSize() - 1; j >= 0; j--) {
@@ -54,7 +54,7 @@ public class CandyFrame extends VBox {
 						if (element.isBreakable()) {
 							BreakableElement aux = (BreakableElement) element;
 							Image image = images.getImage(aux.drop());
-							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setWallImage(finalI, finalJ, image)));
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setEffect(finalI, finalJ, image, Color.SANDYBROWN)));
 						}
 						//para JAILEDCANDY:
 						else if ( element instanceof JailedCandy) {
@@ -64,7 +64,7 @@ public class CandyFrame extends VBox {
 						}
 						else if(cell.golden()){
 							Image image = images.getImage(element);
-							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setGoldenImage(finalI, finalJ, image)));
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setEffect(finalI, finalJ, image, Color.YELLOW)));
 
 						}
 						else{

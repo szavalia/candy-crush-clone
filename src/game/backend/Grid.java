@@ -2,10 +2,8 @@ package game.backend;
 
 import game.backend.cell.Cell;
 import game.backend.element.*;
-import game.backend.move.Direction;
 import game.backend.move.Move;
 import game.backend.move.MoveMaker;
-
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.HashMap;

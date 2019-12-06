@@ -3,7 +3,6 @@ package game.backend.cell;
 import game.backend.Grid;
 import game.backend.element.BreakableElement;
 import game.backend.element.Element;
-import game.backend.element.JailedCandy;
 import game.backend.element.Nothing;
 import game.backend.element.*;
 import game.backend.move.Direction;
@@ -104,7 +103,8 @@ public class Cell {
 				Cell down = around[Direction.DOWN.ordinal()];
 				return down.fallUpperContent();
 			}
-		} 
+		}
+		grid.wasUpdated();
 		return false;
 	}
 

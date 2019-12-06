@@ -2,7 +2,6 @@ package game.backend;
 
 import game.backend.cell.Cell;
 import game.backend.element.Element;
-import game.backend.level.Level3;
 
 public class CandyGame implements GameListener {
 

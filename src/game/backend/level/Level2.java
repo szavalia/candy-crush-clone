@@ -9,6 +9,7 @@ import game.backend.element.Wall;
 public class Level2 extends Level {
     private static int MAX_MOVES = 20;
     private Boolean[][] golden = new Boolean[2][SIZE];
+    private static int TOTAL_GOLDENS = SIZE*SIZE;
 
     @Override
     protected void fillCells() {
@@ -21,7 +22,7 @@ public class Level2 extends Level {
 
     @Override
     protected GameState newState() {
-        return new Level2.Level2State(MAX_MOVES);
+        return new Level2.Level2State(MAX_MOVES, TOTAL_GOLDENS);
     }
 
 
@@ -57,9 +58,10 @@ public class Level2 extends Level {
 
     private class Level2State extends GameState {
         private long maxMoves;
-        private long actualGoldens;
-        public Level2State(int maxMoves ) {
+        private int actualGoldens;
+        public Level2State(int maxMoves, int totalGoldens ) {
             this.maxMoves = maxMoves;
+            this.aux = totalGoldens;
         }
 
         @Override
@@ -83,6 +85,7 @@ public class Level2 extends Level {
                 }
             }
             actualGoldens = SIZE*(horizontal + vertical) - vertical*horizontal;
+            aux = SIZE * SIZE - actualGoldens;
             System.out.println( actualGoldens );
             int i;
             for ( i  = 0 ; i < SIZE ; i++)

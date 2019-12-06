@@ -51,6 +51,10 @@ public class CandyGame implements GameListener {
 	public boolean playerWon() {
 		return state.playerWon();
 	}
+
+	public int getAux(){return state.getAux();}
+
+	public int getMoves(){return state.getMoves();}
 	
 	@Override
 	public void cellExplosion(Element e) {

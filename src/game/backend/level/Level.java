@@ -10,8 +10,6 @@ public abstract class Level extends Grid {
     private Cell wallCell;
     private Cell candyGenCell;
 
-
-
     @Override
     protected abstract GameState newState();
 
@@ -22,7 +20,7 @@ public abstract class Level extends Grid {
         candyGenCell = new CandyGeneratorCell(this);
         generateCells();
     }
-    private void generateCells(){
+    public void generateCells(){
         //corners
         g()[0][0].setAround(candyGenCell, g()[1][0], wallCell, g()[0][1]);
         g()[0][SIZE-1].setAround(candyGenCell, g()[1][SIZE-1], g()[0][SIZE-2], wallCell);

@@ -64,7 +64,7 @@ public class CandyFrame extends VBox {
 				//
 			}
 		});
-
+		scorePanel.updateAux(Integer.toString(game.getAux()));
 		listener.gridUpdated();
 
 		addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
@@ -85,6 +85,8 @@ public class CandyFrame extends VBox {
 						}
 					}
 					scorePanel.updateScore(message);
+					scorePanel.updateMove(Integer.toString(game.getMoves()));
+					scorePanel.updateAux(Integer.toString(game.getAux()));
 					lastPoint = null;
 				}
 			}

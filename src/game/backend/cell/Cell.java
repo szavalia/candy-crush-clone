@@ -3,6 +3,7 @@ package game.backend.cell;
 import game.backend.Grid;
 import game.backend.element.BreakableElement;
 import game.backend.element.Element;
+import game.backend.element.JailedCandy;
 import game.backend.element.Nothing;
 import game.backend.move.Direction;
 
@@ -40,7 +41,7 @@ public class Cell {
 	}
 	
 	public void clearContent() {
-		if (content.isMovable()) {
+		if (content.isMovable() || !content.canExplode() ) {
 			Direction[] explosionCascade = content.explode();
 			grid.cellExplosion(content);
 			this.content = new Nothing();
@@ -62,7 +63,9 @@ public class Cell {
 	}
 	
 	private void explode(Direction d) {
-		clearContent();
+		if (content.canExplode() ){
+			clearContent();
+		}
 		if (this.around[d.ordinal()] != null)
 			this.around[d.ordinal()].explode(d);
 	}

@@ -4,29 +4,30 @@ import javafx.scene.effect.Light;
 import javafx.scene.effect.Lighting;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 
 public class BoardPanel extends TilePane {
 
-	private ImageView[][] cells;
+	private StackPane[][] cells;
 
 	public BoardPanel(final int rows, final int columns, final int cellSize) {
 		setPrefRows(rows);
 		setPrefColumns(columns);
 		setPrefTileHeight(cellSize);
 		setPrefTileWidth(cellSize);
-		this.cells = new ImageView[rows][columns];
+		this.cells = new StackPane[rows][columns];
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < columns; j++) {
-				cells[i][j] = new ImageView();
+				cells[i][j] = new StackPane();
 				getChildren().add(cells[i][j]);
 			}
 		}
 	}
 	
 	public void setImage(int row, int column, Image image) {
-		cells[row][column].setImage(image);
+		cells[row][column].getChildren().add(new ImageView(image));
 		cells[row][column].setEffect(null);
 	}
 
@@ -37,7 +38,11 @@ public class BoardPanel extends TilePane {
 		spotLight.setElevation(100);
 		Lighting lighting = new Lighting(spotLight);
 		cells[row][column].setEffect(lighting);
+	}
 
+	public void setJailImage( int row , int column , Image image , Image Jail){
+		setImage(row , column , image );
+		cells[row][column].getChildren().add(new ImageView(Jail));
 
-		}
+	}
 }

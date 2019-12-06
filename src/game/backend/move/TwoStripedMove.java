@@ -11,10 +11,14 @@ public class TwoStripedMove extends Move {
 	@Override
 	public void removeElements() {
 		for(int i = 0; i < Grid.SIZE; i++) {
-			clearContent(i, j2);
+			if ( grid.get(i,j2).canExplode()){
+				clearContent(i, j2);
+			}
 		}
 		for(int j = 0; j < Grid.SIZE; j++) {
-			clearContent(i2, j);
+			if ( grid.get(i2,j).canExplode()){
+				clearContent(i2, j);
+			}
 		}
 	}
 

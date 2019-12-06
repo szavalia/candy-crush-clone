@@ -13,14 +13,18 @@ public class WrappedStripedMove extends Move {
 		for(int i = -1; i < 2; i++) {
 			for(int j = 0; j < Grid.SIZE; j++) {
 				if (i2 + i >= 0 && i2 + i < Grid.SIZE) {
-					clearContent(i2 + i, j);
+					if ( grid.get(i2+i , j).canExplode()) {
+						clearContent(i2 + i, j);
+					}
 				}
 			}
 		}
 		for(int j = -1; j < 2; j++) {
 			for(int i = 0; i < Grid.SIZE; i++) {
 				if (j2 + j >= 0 && j2 + j < Grid.SIZE) {
-					clearContent(i, j2 + j);
+					if (grid.get(i, j2 + j).canExplode()) {
+						clearContent(i, j2 + j);
+					}
 				}
 			}
 		}

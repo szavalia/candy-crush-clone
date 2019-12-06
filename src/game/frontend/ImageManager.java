@@ -24,6 +24,7 @@ public class ImageManager {
 		VerticalStripedCandy vc = new VerticalStripedCandy();
 		HorizontalStripedCandy hc = new HorizontalStripedCandy();
 		images = new HashMap<>();
+		images.put("JAIL" , new Image(IMAGE_PATH + "jail.png"));
 		images.put(new Nothing().getKey(), new Image(IMAGE_PATH + "nothing.png"));
 		images.put(new Bomb().getKey(),  new Image(IMAGE_PATH + "bomb.png"));
 		images.put(new Wall().getKey(),  new Image(IMAGE_PATH + "wall.png"));

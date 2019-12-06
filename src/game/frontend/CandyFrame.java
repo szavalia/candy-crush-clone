@@ -4,8 +4,10 @@ import game.backend.CandyGame;
 import game.backend.GameListener;
 import game.backend.cell.Cell;
 import game.backend.element.BreakableElement;
+import game.backend.element.Candy;
 import game.backend.element.Element;
 
+import game.backend.element.JailedCandy;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Point2D;
@@ -52,7 +54,12 @@ public class CandyFrame extends VBox {
 							BreakableElement aux = (BreakableElement) element;
 							Image image = images.getImage(aux.drop());
 							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setWallImage(finalI, finalJ, image)));
-						} else {
+						} else if ( element instanceof JailedCandy) {
+							Image jail = images.getImage(element);
+							Image image = images.getImage(new Candy(((JailedCandy) element).getColor()));
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setJailImage(finalI, finalJ, image, jail)));
+						}
+						else {
 							Image image = images.getImage(element);
 							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, image)));
 						}

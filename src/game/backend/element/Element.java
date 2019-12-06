@@ -25,5 +25,7 @@ public abstract class Element {
 	}
 
 	public boolean isBreakable(){ return false; }
+
+	public boolean canExplode(){return true; };
 	
 }

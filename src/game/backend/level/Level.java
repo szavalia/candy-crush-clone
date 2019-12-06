@@ -20,7 +20,8 @@ public abstract class Level extends Grid {
         candyGenCell = new CandyGeneratorCell(this);
         generateCells();
     }
-    public void generateCells(){
+
+    protected void generateCells(){
         //corners
         g()[0][0].setAround(candyGenCell, g()[1][0], wallCell, g()[0][1]);
         g()[0][SIZE-1].setAround(candyGenCell, g()[1][SIZE-1], g()[0][SIZE-2], wallCell);

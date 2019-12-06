@@ -1,13 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f89715a7-0341-4168-bab5-2c72e370de76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/CandyGeneratorCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/CandyGeneratorCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/CandyMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/CandyMove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ImageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ImageManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/cell/CandyGeneratorCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/cell/CandyGeneratorCell.java" afterDir="false" />
+    <list default="true" id="f89715a7-0341-4168-bab5-2c72e370de76" name="Default Changelist" comment="Ya es final">
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/META-INF/TPE-POO.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/CandyGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/Checkpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/Figure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/FigureDetector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/GameListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/GameState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/Grid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/CandyGeneratorCell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/Cell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Bomb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/BreakableElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/BreakableWall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Candy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/CandyColor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Element.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/HorizontalStripedCandy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/JailedCandy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Nothing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/VerticalStripedCandy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/Wall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/element/WrappedCandy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level1$Level1State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4$Level4State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level5$Level5State.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombStrippedMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombWrappedMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/CandyMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/Move.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/MoveMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoBombMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoStripedMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/TwoWrappedMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/WrappedStripedMove.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/AppMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/BoardPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/GameApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ImageManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ScorePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/blueCandy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/blueHStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/blueVStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/blueWrapped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/bomb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/cherry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/gap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/greenCandy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/greenHStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/greenVStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/greenWrapped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/hazelnut.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/jail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/jelly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/nothing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/orangeCandy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/orangeHStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/orangeVStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/orangeWrapped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/purpleCandy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/purpleHStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/purpleVStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/purpleWrapped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/redCandy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/redHStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/redVStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/redWrapped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/wall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/yellowCandy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/yellowHStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/yellowVStripped.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/images/yellowWrapped.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +130,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">

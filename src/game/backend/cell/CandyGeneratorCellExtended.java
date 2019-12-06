@@ -48,13 +48,11 @@ public class CandyGeneratorCellExtended extends CandyGeneratorCell {
     private Element getCherry(){
         cantCherrys--;
         placedFruits++;
-        System.out.println(placedFruits);
         return new Cherry();
     }
     private Element getHazelnut(){
         cantHazelnut--;
         placedFruits++;
-        System.out.println(placedFruits);
         return new Hazelnut();
     }
 

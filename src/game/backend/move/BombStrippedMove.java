@@ -19,7 +19,7 @@ public class BombStrippedMove extends Move {
 		CandyColor color = candy.getColor();
 		for(int i = 0; i < Grid.SIZE; i++) {
 			for(int j = 0; j < Grid.SIZE; j++) {
-				if (candy.equals(get(i, j))) {
+				if (candy.equals(get(i, j)) ) {
 					setContent(i, j, createStriped(color));
 				}
 			}

@@ -2,6 +2,7 @@ package game.backend.move;
 
 import game.backend.Grid;
 import game.backend.element.Bomb;
+import game.backend.element.BreakableWall;
 import game.backend.element.Candy;
 
 public class BombMove extends Move {
@@ -19,6 +20,12 @@ public class BombMove extends Move {
 			for(int j = 0; j < Grid.SIZE; j++) {
 				if (candy.equals(get(i, j))) {
 					clearContent(i, j);
+				}
+				else if ( get(i , j ).isBreakable() ){
+					BreakableWall aux = (BreakableWall) get(i , j );
+					if ( candy.equals(aux.drop())){
+						clearContent(i,j);
+					}
 				}
 			}
 		}

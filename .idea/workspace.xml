@@ -3,22 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f89715a7-0341-4168-bab5-2c72e370de76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/Grid.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/CandyGeneratorCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/CandyGeneratorCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/cell/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4$Level4State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4$Level4State.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/level/Level4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombMove.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/backend/move/BombMove.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/CandyFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ScorePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPE-POO/game/frontend/ScorePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/backend/cell/CandyGeneratorCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/cell/CandyGeneratorCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/cell/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/cell/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/backend/level/Level4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/level/Level4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/frontend/CandyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/frontend/CandyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/frontend/ScorePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/frontend/ScorePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/backend/move/BombMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/BombMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/backend/move/BombStrippedMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/backend/move/BombStrippedMove.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

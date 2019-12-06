@@ -3,8 +3,11 @@ package game.frontend;
 import game.backend.CandyGame;
 import game.backend.GameListener;
 import game.backend.cell.Cell;
+import game.backend.element.BreakableElement;
+import game.backend.element.Candy;
 import game.backend.element.Element;
 
+import game.backend.element.JailedCandy;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Point2D;
@@ -37,7 +40,7 @@ public class CandyFrame extends VBox {
 			@Override
 			public void gridUpdated() {
 				Timeline timeLine = new Timeline();
-				Duration frameGap = Duration.millis(20);
+				Duration frameGap = Duration.millis(100);
 				Duration frameTime = Duration.ZERO;
 				for (int i = game().getSize() - 1; i >= 0; i--) {
 					for (int j = game().getSize() - 1; j >= 0; j--) {
@@ -45,11 +48,22 @@ public class CandyFrame extends VBox {
 						int finalJ = j;
 						Cell cell = CandyFrame.this.game.get(i, j);
 						Element element = cell.getContent();
-						Image image = images.getImage(element);
-						if(cell.golden()){
-							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setGoldenImage(finalI, finalJ, image)));
+
+						timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, null)));
+						//para elementos breakable:
+						if (element.isBreakable()) {
+							BreakableElement aux = (BreakableElement) element;
+							Image image = images.getImage(aux.drop());
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setWallImage(finalI, finalJ, image)));
 						}
-						else{
+						//para JAILEDCANDY:
+						else if ( element instanceof JailedCandy) {
+							Image jail = images.getImage(element);
+							Image image = images.getImage(new Candy(((JailedCandy) element).getColor()));
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setJailImage(finalI, finalJ, image, jail)));
+						}
+						else {
+							Image image = images.getImage(element);
 							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, image)));
 						}
 					}

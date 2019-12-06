@@ -37,6 +37,4 @@ public class ScorePanel extends BorderPane {
 		moveLabel.setText(textRight);
 	}
 
-
-
 }

@@ -4,6 +4,8 @@ import game.backend.CandyGame;
 import game.backend.level.Level1;
 import game.backend.level.Level2;
 import game.backend.level.Level3;
+import game.backend.level.Level4;
+import game.backend.level.Level5;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -23,11 +25,13 @@ public class GameApp extends Application {
 		Button level1 = new Button("Level 1");
 		Button level2 = new Button("Level 2");
 		Button level3 = new Button("Level 3");
+		Button level4 = new Button("Level 4");
+		Button level5 = new Button("Level 5");
 		Label label1 = new Label("Menu de inicio. elija el nivel:");
 
 		VBox layout = new VBox(20);
 		VBox layout2 = new VBox();
-		layout.getChildren().addAll(label1, level1, level2, level3);
+		layout.getChildren().addAll(label1, level1, level2, level3, level4, level5);
 
 		Scene scene = new Scene(layout, 300, 250);
 		Scene scene2 = new Scene(layout2);
@@ -38,15 +42,24 @@ public class GameApp extends Application {
 			startSpecial(secStage, Level1.class);
 		});
 
+//		level2.setOnAction(e -> {secStage.setScene(scene2);
+//			secStage.setTitle("Level 2");
+//			startSpecial(secStage, Level2.class);
+//		});
+//
+//        level3.setOnAction(e -> {secStage.setScene(scene2);
+//            startSpecial(secStage, Level3.class);
+//        });
 
-		level2.setOnAction(e -> {secStage.setScene(scene2);
-			secStage.setTitle("Level 2");
-			startSpecial(secStage, Level2.class);
+		level4.setOnAction(e -> {secStage.setScene(scene2);
+			secStage.setTitle("Level 4");
+			startSpecial(secStage, Level4.class);
+		});
+		level5.setOnAction(e -> {secStage.setScene(scene2);
+			secStage.setTitle("Level 1");
+			startSpecial(secStage, Level5.class);
 		});
 
-        level3.setOnAction(e -> {secStage.setScene(scene2);
-            startSpecial(secStage, Level3.class);
-        });
 
 		primaryStage.setScene(scene);
 		primaryStage.show();
@@ -60,4 +73,5 @@ public class GameApp extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
+
 }

@@ -23,5 +23,9 @@ public abstract class Element {
 	public long getScore() {
 		return 0;
 	}
+
+	public boolean isBreakable(){ return false; }
+
+	public boolean canExplode(){return true; };
 	
 }

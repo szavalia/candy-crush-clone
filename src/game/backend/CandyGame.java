@@ -2,6 +2,7 @@ package game.backend;
 
 import game.backend.cell.Cell;
 import game.backend.element.Element;
+import game.backend.level.Level3;
 
 public class CandyGame implements GameListener {
 
@@ -20,7 +21,10 @@ public class CandyGame implements GameListener {
 			System.out.println("ERROR AL INICIAR");
 		}
 		state = grid.createState();
-		grid.initialize();
+		if(grid instanceof Level3){
+			Level3 aux = (Level3)grid;
+			aux.initialize();
+		}
 		addGameListener(this);
 	}
 

@@ -1,9 +1,8 @@
 package game.backend;
 
 import game.backend.cell.Cell;
-import game.backend.element.Candy;
-import game.backend.element.CandyColor;
-import game.backend.element.Element;
+import game.backend.element.*;
+import game.backend.move.Direction;
 import game.backend.move.Move;
 import game.backend.move.MoveMaker;
 
@@ -61,7 +60,7 @@ public abstract class Grid {
 		while (i >= 0) {
 			int j = 0;
 			while (j < SIZE) {
-				if (g[i][j].isEmpty()) {
+				if (g[i][j].isEmpty()){
 					if (g[i][j].fallUpperContent()) {
 						i = SIZE;
 						j = -1;
@@ -84,6 +83,7 @@ public abstract class Grid {
 	
 	public boolean tryMove(int i1, int j1, int i2, int j2) {
 		Move move = moveMaker.getMove(i1, j1, i2, j2);
+
 		swapContent(i1, j1, i2, j2);
 		if (move.isValid()) {
 			move.removeElements();
@@ -148,5 +148,4 @@ public abstract class Grid {
 			gl.cellExplosion(e);
 		}
 	}
-
 }

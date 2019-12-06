@@ -8,14 +8,13 @@ import game.backend.element.Wall;
 
 public class Level1 extends Level {
 	
-	private static int REQUIRED_SCORE = 5000; 
+	private static int REQUIRED_SCORE = 5000;
 	private static int MAX_MOVES = 20;
 	
 	@Override
 	protected GameState newState() {
 		return new Level1State(REQUIRED_SCORE, MAX_MOVES);
 	}
-
 
 	
 	@Override

@@ -3,6 +3,7 @@ package game.frontend;
 import game.backend.CandyGame;
 import game.backend.GameListener;
 import game.backend.cell.Cell;
+import game.backend.element.BreakableElement;
 import game.backend.element.Element;
 
 import javafx.animation.KeyFrame;
@@ -45,9 +46,16 @@ public class CandyFrame extends VBox {
 						int finalJ = j;
 						Cell cell = CandyFrame.this.game.get(i, j);
 						Element element = cell.getContent();
-						Image image = images.getImage(element);
+
 						timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, null)));
-						timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, image)));
+						if (element.isBreakable()) {
+							BreakableElement aux = (BreakableElement) element;
+							Image image = images.getImage(aux.drop());
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setWallImage(finalI, finalJ, image)));
+						} else {
+							Image image = images.getImage(element);
+							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, image)));
+						}
 					}
 					frameTime = frameTime.add(frameGap);
 				}

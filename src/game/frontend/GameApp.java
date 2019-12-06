@@ -2,6 +2,7 @@ package game.frontend;
 
 import game.backend.CandyGame;
 import game.backend.level.Level1;
+import game.backend.level.Level4;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -33,7 +34,7 @@ public class GameApp extends Application {
 		Stage secStage = new Stage();
 		level1.setOnAction(e -> {secStage.setScene(scene2);
 			secStage.setTitle("Level 1");
-			startSpecial(secStage, Level1.class);
+			startSpecial(secStage, Level4.class);
 		});
 
 		//cuando tengamos level 2 saquen esto de comment :)

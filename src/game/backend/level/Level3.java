@@ -54,7 +54,7 @@ public class Level3 extends Level {
                 collectedFruits++;
             }
         }
-        state().addAux(collectedFruits);
+        state().setAux(state().getAux() + collectedFruits);
         fallElements();
     }
         private class Level3State extends GameState{

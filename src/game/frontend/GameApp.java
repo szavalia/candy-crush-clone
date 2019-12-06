@@ -42,14 +42,14 @@ public class GameApp extends Application {
 			startSpecial(secStage, Level1.class);
 		});
 
-//		level2.setOnAction(e -> {secStage.setScene(scene2);
-//			secStage.setTitle("Level 2");
-//			startSpecial(secStage, Level2.class);
-//		});
-//
-//        level3.setOnAction(e -> {secStage.setScene(scene2);
-//            startSpecial(secStage, Level3.class);
-//        });
+		level2.setOnAction(e -> {secStage.setScene(scene2);
+			secStage.setTitle("Level 2");
+			startSpecial(secStage, Level2.class);
+		});
+
+        level3.setOnAction(e -> {secStage.setScene(scene2);
+            startSpecial(secStage, Level3.class);
+        });
 
 		level4.setOnAction(e -> {secStage.setScene(scene2);
 			secStage.setTitle("Level 4");
@@ -59,7 +59,6 @@ public class GameApp extends Application {
 			secStage.setTitle("Level 1");
 			startSpecial(secStage, Level5.class);
 		});
-
 
 		primaryStage.setScene(scene);
 		primaryStage.show();

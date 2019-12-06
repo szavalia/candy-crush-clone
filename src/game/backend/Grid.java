@@ -83,16 +83,18 @@ public abstract class Grid {
 	}
 	
 	public boolean tryMove(int i1, int j1, int i2, int j2) {
-		Move move = moveMaker.getMove(i1, j1, i2, j2);
-		swapContent(i1, j1, i2, j2);
-		if (move.isValid()) {
-			move.removeElements();
-			fallElements();
-			return true;
-		} else {
+		if ( g()[i1][j1].isMovable() && g()[i2][j2].isMovable() ) {
+			Move move = moveMaker.getMove(i1, j1, i2, j2);
 			swapContent(i1, j1, i2, j2);
-			return false;
+			if (move.isValid()) {
+				move.removeElements();
+				fallElements();
+				return true;
+			} else {
+				swapContent(i1, j1, i2, j2);
+				return false; }
 		}
+		return false;
 	}	
 	
 	public Figure tryRemove(Cell cell) {

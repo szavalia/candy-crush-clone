@@ -66,7 +66,7 @@ public class CandyFrame extends VBox {
 				//
 			}
 		});
-
+		scorePanel.updateAux(Integer.toString(game.getAux()));
 		listener.gridUpdated();
 
 		addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {

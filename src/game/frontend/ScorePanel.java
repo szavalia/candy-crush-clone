@@ -12,7 +12,7 @@ public class ScorePanel extends BorderPane {
 	//quiero tener 3 labels para ponerle texto, todas en linea
 	public ScorePanel() {
 		setStyle("-fx-background-color: #5490ff");
-		auxLabel = new Label("0");
+		auxLabel = new Label("-");
 		auxLabel.setAlignment(Pos.CENTER_LEFT);
 		auxLabel.setStyle("-fx-font-size: 24");
 		setStyle("-fx-background-color: #5490ff");
@@ -31,7 +31,7 @@ public class ScorePanel extends BorderPane {
 	public void updateScore( String textCentre) {
 		scoreLabel.setText(textCentre);
 	}
-	public void updateAux(String textLeft){
+	public void updateAux( String textLeft ){
 		auxLabel.setText(textLeft);
 	}
 	public void updateMove(String textRight){

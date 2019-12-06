@@ -46,8 +46,6 @@ public class CandyFrame extends VBox {
 						Cell cell = CandyFrame.this.game.get(i, j);
 						Element element = cell.getContent();
 						Image image = images.getImage(element);
-
-						System.out.println(cell.golden());
 						if(cell.golden()){
 							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setGoldenImage(finalI, finalJ, image)));
 						}

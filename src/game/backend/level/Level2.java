@@ -31,7 +31,6 @@ public class Level2 extends Level {
         boolean ret;
         if (ret = super.tryMove(i1, j1, i2, j2)) {
             if ( i1 == i2 ){
-                System.out.println("movimiento horizontal");
                 if (!golden[0][i1]) {
                     golden[0][i1] = true;
                     int j;
@@ -41,7 +40,6 @@ public class Level2 extends Level {
                 }
             }
             else {
-                System.out.println("movimiento vertical");
                 if (!golden[1][j1]) {
                     golden[1][j1] = true;
                     int i;
@@ -86,27 +84,6 @@ public class Level2 extends Level {
             }
             actualGoldens = SIZE*(horizontal + vertical) - vertical*horizontal;
             aux = SIZE * SIZE - actualGoldens;
-            System.out.println( actualGoldens );
-            int i;
-            for ( i  = 0 ; i < SIZE ; i++)
-                if ( golden[0][i]) {
-                    System.out.print("x|");
-                }
-                else {
-                    System.out.print("0|");
-                }
-                System.out.print("\n");
-            for ( i  = 0 ; i < SIZE ; i++)
-                if ( golden[1][i]) {
-                    System.out.print("x|");
-                }
-                else {
-                    System.out.print("0|");
-                }
-            System.out.print("\n");
-
-
-
         }
         public boolean gameOver() {
             return playerWon() || getMoves() >= maxMoves;

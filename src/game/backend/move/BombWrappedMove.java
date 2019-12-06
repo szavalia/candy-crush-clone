@@ -17,26 +17,22 @@ public class BombWrappedMove extends Move {
 		clearContent(i2, j2);
 		for(int i = 0; i < Grid.SIZE; i++) {
 			for(int j = 0; j < Grid.SIZE; j++) {
-				if (candy.equals(get(i, j)) && grid.get(i,j).canExplode()) {
+				if (candy.equals(get(i, j))) {
 					clearContent(i, j);
 				}
 			}
 		}
 		for(int i = -1; i < 2; i++) {
-			for (int j = -1; j < 2; j++) {
+			for(int j = -1; j < 2; j++) {
 				if (i1 + i >= 0 && i1 + i < Grid.SIZE && j1 + j >= 0 && j1 + j < Grid.SIZE) {
-					if (grid.get(i1 + i, j1 + j).canExplode()) {
-						clearContent(i1 + i, j1 + j);
-					}
+					clearContent(i1 + i, j1 + j);
 				}
 			}
 		}
 		for(int i = -1; i < 2; i++) {
 			for(int j = -1; j < 2; j++) {
 				if (i2 + i >= 0 && i2 + i < Grid.SIZE && j2 + j >= 0 && j2 + j < Grid.SIZE) {
-					if ( grid.get(i2 + i ,j2 + j ).canExplode()) {
-						clearContent(i2 + i, j2 + j);
-					}
+					clearContent(i2 + i, j2 + j);
 				}
 			}
 		}

@@ -1,7 +1,6 @@
 package game.backend.move;
 
 import game.backend.Grid;
-import game.backend.element.Candy;
 
 public class TwoWrappedMove extends Move {
 	
@@ -20,21 +19,11 @@ public class TwoWrappedMove extends Move {
 				currI = i2;
 				currJ = j2;
 			}
-			if ( grid.get(currI, currJ-1).canExplode()){
-				clearContent(currI, currJ-1);
-			}
-			if ( grid.get(currI , currJ +2 ).canExplode()) {
-				clearContent(currI, currJ + 2);
-			}
+			clearContent(currI,currJ-1);
+			clearContent(currI, currJ + 2);
 			for(int n = -1; n < 3; n++) {
-				{
-					if (grid.get(currI - 1, currJ + n).canExplode()) {
-						clearContent(currI - 1, currJ + n);
-					}
-				}
-				if (grid.get(currI + 1, currJ + n).canExplode()) {
-					clearContent(currI + 1, currJ + n);
-				}
+				clearContent(currI - 1, currJ + n);
+				clearContent(currI + 1, currJ + n);
 			}
 		} else {
 			if (i1 < i2) {
@@ -44,19 +33,11 @@ public class TwoWrappedMove extends Move {
 				currI = i2;
 				currJ = j2;
 			}
-			if ( grid.get( currI , currJ -1 ).canExplode()) {
-				clearContent(currI, currJ - 1);
-			}
-			if ( grid.get(currI , currJ+2).canExplode()) {
-				clearContent(currI, currJ + 2);
-			}
+			clearContent(currI,currJ-1);
+			clearContent(currI,currJ+2);
 			for(int n = -1; n < 3; n++) {
-				if ( grid.get(currI -1 , currJ + n).canExplode() ) {
-					clearContent(currI - 1, currJ + n);
-				}
-				if ( grid.get( currI - 1, currJ + n).canExplode() ) {
-					clearContent(currI + 1, currJ + n);
-				}
+				clearContent(currI - 1, currJ + n);
+				clearContent(currI + 1, currJ + n);
 			}
 		}
 	}

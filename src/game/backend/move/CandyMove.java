@@ -16,7 +16,6 @@ public class CandyMove extends Move {
 		super(grid);
 		this.grid = grid;
 	}
-	
 	@Override
 	public boolean internalValidation() {
 		this.detector = new FigureDetector(grid);

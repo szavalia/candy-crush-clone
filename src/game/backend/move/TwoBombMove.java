@@ -12,9 +12,7 @@ public class TwoBombMove extends Move {
 	public void removeElements() {
 		for(int i = 0; i < Grid.SIZE; i++) {
 			for(int j = 0; j < Grid.SIZE; j++) {
-				if ( grid.get(i,j).canExplode()){
-					clearContent(i, j);
-				}
+				clearContent(i,j);
 			}
 		}
 	}

@@ -18,9 +18,7 @@ public class BombMove extends Move {
 		for(int i = 0; i < Grid.SIZE; i++) {
 			for(int j = 0; j < Grid.SIZE; j++) {
 				if (candy.equals(get(i, j))) {
-					if ( grid.get(i,j).canExplode()){
-						clearContent(i, j);
-					}
+					clearContent(i, j);
 				}
 			}
 		}

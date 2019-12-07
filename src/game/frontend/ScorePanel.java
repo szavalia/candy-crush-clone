@@ -8,7 +8,6 @@ public class ScorePanel extends BorderPane {
 	private Label auxLabel;
 	private Label scoreLabel;
 	private Label moveLabel;
-	//quiero tener 3 labels para ponerle texto, todas en linea
 	public ScorePanel() {
 		setStyle("-fx-background-color: #5490ff");
 		auxLabel = new Label("Especiales : -");

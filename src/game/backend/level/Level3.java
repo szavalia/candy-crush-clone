@@ -6,7 +6,7 @@ import game.backend.cell.Cell;
 import game.backend.element.*;
 
 public class Level3 extends Level {
-    private final int CANT_FRUITS = 8;
+    private final int CANT_FRUITS = 20;
     private final int MAX_MOVES = 20;
 
     @Override
@@ -25,16 +25,30 @@ public class Level3 extends Level {
     @Override
     public void initialize() {
         super.initialize();
+        while ( illegalFruits() ){
+            deleteIllegalFruits();
+        }
+        checkFruits();
+    }
+
+    private void deleteIllegalFruits(){
         for(int j = 0; j < SIZE; j++){
-            if(g()[SIZE-1][j].getContent() instanceof Fruit){
-                int i = (int) (Math.random() * CandyColor.values().length);
+            while(g()[SIZE-1][j].getContent() instanceof Fruit){
                 g()[SIZE-1][j].setContent(new Nothing());
                 CandyGeneratorCellExtended aux = (CandyGeneratorCellExtended) candyGenCell;
                 aux.decreaseFruits();
+                fallElements();
             }
         }
-        fallElements();
-        checkFruits();
+    }
+
+    private boolean illegalFruits(){
+        for ( int j = 0; j < SIZE ; j++){
+            if (g()[SIZE-1][j].getContent() instanceof Fruit){
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

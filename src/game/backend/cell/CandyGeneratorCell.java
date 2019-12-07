@@ -23,7 +23,7 @@ public class CandyGeneratorCell extends Cell {
 
 	@Override
 	public Element getContent() {
-		int i = (int)(Math.random() * ((CandyColor.values().length) - 3) );
+		int i = (int)(Math.random() * (CandyColor.values().length));
 		return new Candy(CandyColor.values()[i]);
 	}
 	

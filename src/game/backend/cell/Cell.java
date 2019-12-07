@@ -105,7 +105,9 @@ public class Cell {
 				return down.fallUpperContent();
 			}
 		}
-		grid.wasUpdated();
+		if( !up.isMovable()) {
+			grid.wasUpdated();
+		}
 		return false;
 	}
 

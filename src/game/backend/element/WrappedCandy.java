@@ -5,7 +5,7 @@ import game.backend.move.Direction;
 public class WrappedCandy extends SpecialCandy {
 
 	public WrappedCandy() {
-		Direction[] explosion = new Direction[4];
+		this.explosion = new Direction[4];
 		explosion[0] = Direction.LEFT;
 		explosion[1] = Direction.RIGHT;
 		explosion[2] = Direction.UP;

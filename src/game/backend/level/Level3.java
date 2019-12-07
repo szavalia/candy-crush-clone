@@ -7,7 +7,7 @@ import game.backend.cell.Cell;
 import game.backend.element.*;
 
 public class Level3 extends Level {
-    private final int CANT_FRUITS = 20;
+    private final int CANT_FRUITS = 60;
     private final int MAX_MOVES = 20;
 
     @Override
@@ -29,7 +29,7 @@ public class Level3 extends Level {
         int decrease;
         while ( (decrease = lastLineFruits()) != 0 ) {
             CandyGeneratorCellExtended aux = (CandyGeneratorCellExtended) candyGenCell;
-            aux.decreaseFruits();
+            aux.decreaseFruits(decrease);
         }
     }
 

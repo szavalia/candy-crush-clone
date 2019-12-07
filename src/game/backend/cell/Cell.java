@@ -111,10 +111,13 @@ public class Cell {
 	public void goldenOn(){
 		golden = true;
 	}
+
 	public boolean golden() { return golden; }
+
 	public void setContent(Element content) {
 		this.content = content;
 	}
+
 	public void wallOn(){ wall = true; }
 
 	public void wallOff(){ wall = false;}

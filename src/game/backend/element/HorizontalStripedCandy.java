@@ -5,7 +5,7 @@ import game.backend.move.Direction;
 public class HorizontalStripedCandy extends SpecialCandy {
 	
 	public HorizontalStripedCandy() {
-		Direction[] explosion = new Direction[2];
+		this.explosion = new Direction[2];
 		explosion[0] = Direction.LEFT;
 		explosion[1] = Direction.RIGHT;
 	}

@@ -56,7 +56,7 @@ public class CandyGeneratorCellExtended extends CandyGeneratorCell {
         return new Hazelnut();
     }
 
-    public void decreaseFruits(){
-        placedFruits--;
+    public void decreaseFruits(int value){
+        placedFruits-=value;
     }
 }

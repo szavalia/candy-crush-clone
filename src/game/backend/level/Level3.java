@@ -6,7 +6,7 @@ import game.backend.cell.Cell;
 import game.backend.element.*;
 
 public class Level3 extends Level {
-    private final int CANT_FRUITS = 2;
+    private final int CANT_FRUITS = 8;
     private final int MAX_MOVES = 20;
 
     @Override
@@ -28,20 +28,27 @@ public class Level3 extends Level {
         for(int j = 0; j < SIZE; j++){
             if(g()[SIZE-1][j].getContent() instanceof Fruit){
                 int i = (int) (Math.random() * CandyColor.values().length);
-                g()[SIZE-1][j].setContent(new Candy(CandyColor.values()[i]));
+                g()[SIZE-1][j].setContent(new Nothing());
                 CandyGeneratorCellExtended aux = (CandyGeneratorCellExtended) candyGenCell;
                 aux.decreaseFruits();
             }
         }
+        fallElements();
         checkFruits();
     }
 
     @Override
     public boolean tryMove(int i1, int j1, int i2, int j2) {
         boolean ret;
-        if (ret = super.tryMove(i1, j1, i2, j2)) { // es un movimiento valido
-            state().addMove();
+        if(!(get(i1,j1) instanceof Fruit) || !(get(i2,j2) instanceof Fruit)) {
+            if (ret = super.tryMove(i1, j1, i2, j2)) { // es un movimiento valido
+                state().addMove();
+            }
         }
+        else{
+            ret = false;
+        }
+        System.out.printf("Valor de ret : %s", ret);
         checkFruits(); //fijate si me quedaron frutas al fondo y agregalas al aux de GameState
         return ret;
     }

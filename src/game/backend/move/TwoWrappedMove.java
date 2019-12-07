@@ -3,11 +3,11 @@ package game.backend.move;
 import game.backend.Grid;
 
 public class TwoWrappedMove extends Move {
-	
+
 	public TwoWrappedMove(Grid grid) {
 		super(grid);
 	}
-	
+
 	@Override
 	public void removeElements() {
 		int currI, currJ;
@@ -19,9 +19,9 @@ public class TwoWrappedMove extends Move {
 				currI = i2;
 				currJ = j2;
 			}
-			clearContent(currI,currJ-1);
+			clearContent(currI, currJ - 1);
 			clearContent(currI, currJ + 2);
-			for(int n = -1; n < 3; n++) {
+			for (int n = -1; n < 3; n++) {
 				clearContent(currI - 1, currJ + n);
 				clearContent(currI + 1, currJ + n);
 			}
@@ -33,13 +33,15 @@ public class TwoWrappedMove extends Move {
 				currI = i2;
 				currJ = j2;
 			}
-			clearContent(currI,currJ-1);
-			clearContent(currI,currJ+2);
-			for(int n = -1; n < 3; n++) {
+			clearContent(currI, currJ - 1);
+			clearContent(currI, currJ + 2);
+			for (int n = -1; n < 3; n++) {
 				clearContent(currI - 1, currJ + n);
 				clearContent(currI + 1, currJ + n);
 			}
-		}
-	}
 
+		}
+		clearContent(i1, j1);
+		clearContent(i2, j2);
+	}
 }

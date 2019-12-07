@@ -12,13 +12,14 @@ public class Cell {
 	private Grid grid;
 	private Cell[] around = new Cell[Direction.values().length];
 	private Element content;
-	
+	private boolean wall;
 	public Cell(Grid grid) {
 		this.grid = grid;
 		this.content = new Nothing();
 		this.golden = false;
+		this.wall = false;
 	}
-	
+
 	public void setAround(Cell up, Cell down, Cell left, Cell right) {
 		this.around[Direction.UP.ordinal()] = up;
 		this.around[Direction.DOWN.ordinal()] = down;
@@ -75,7 +76,8 @@ public class Cell {
 	}
 	
 	private void explode(Direction d) {
-		if (content.canExplode() ){
+		if (content.canExplode()){
+			wallOff();
 			clearContent();
 		}
 		if (this.around[d.ordinal()] != null)
@@ -115,5 +117,9 @@ public class Cell {
 	public void setContent(Element content) {
 		this.content = content;
 	}
+	public void wallOn(){ wall = true; }
 
+	public void wallOff(){ wall = false;}
+
+	public boolean hasWall(){return wall; }
 }

@@ -51,9 +51,8 @@ public class CandyFrame extends VBox {
 
 						timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setImage(finalI, finalJ, null)));
 						//para elementos breakable:
-						if (element.isBreakable()) {
-							BreakableElement aux = (BreakableElement) element;
-							Image image = images.getImage(aux.drop());
+						if (cell.hasWall()) {
+							Image image = images.getImage(element);
 							timeLine.getKeyFrames().add(new KeyFrame(frameTime, e -> boardPanel.setEffect(finalI, finalJ, image, Color.SANDYBROWN)));
 						}
 						//para JAILEDCANDY:

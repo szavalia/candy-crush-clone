@@ -3,14 +3,13 @@ package game.backend.level;
 import game.backend.GameState;
 import game.backend.element.BreakableWall;
 
-
-public class Level4 extends Level {
+public class LevelOculto extends Level {
     private final int MAXMOVES = 20;
     private static int WALLHEIGHT = 3;
     private static int WALLWIDTH = 3;
     private static int WALLCENTER = SIZE/2;
     @Override
-    protected GameState newState(){ return new Level4State( MAXMOVES , WALLHEIGHT * WALLWIDTH);}
+    protected GameState newState(){ return new LevelOcultoState( MAXMOVES , WALLHEIGHT * WALLWIDTH);}
 
     @Override
     public void initialize(){
@@ -34,16 +33,16 @@ public class Level4 extends Level {
         int i, j;
         for (i = 0; i < WALLHEIGHT; i++) {
             for (j = 0; j < WALLWIDTH; j++) {
-                g()[WALLCENTER - (WALLHEIGHT)/2 + i ][WALLCENTER - (WALLWIDTH)/2 + j].wallOn();
+                g()[WALLCENTER - (WALLHEIGHT)/2 + i ][WALLCENTER - (WALLWIDTH)/2 + j].setContent(new BreakableWall(g()[WALLCENTER -(WALLHEIGHT)/2 + i][WALLCENTER -(WALLWIDTH)/2 + j].getContent()));
             }
         }
     }
 
-    private class Level4State extends GameState {
+    private class LevelOcultoState extends GameState {
 
         private long maxMoves;
 
-        private Level4State(int maxMoves, int walls ) {
+        private LevelOcultoState(int maxMoves, int walls ) {
             this.maxMoves = maxMoves;
             aux = walls;
         }
@@ -53,7 +52,7 @@ public class Level4 extends Level {
             int i, j, total = 0;
             for (i = 0; i < WALLHEIGHT; i++) {
                 for (j = 0; j < WALLWIDTH; j++) {
-                    if (g()[WALLCENTER - (WALLHEIGHT) / 2 + i][WALLCENTER - (WALLWIDTH) / 2 + j].hasWall()); {
+                    if (g()[WALLCENTER - (WALLHEIGHT) / 2 + i][WALLCENTER - (WALLWIDTH) / 2 + j].getContent().isBreakable()) {
                         total++;
                     }
                 }
@@ -72,4 +71,3 @@ public class Level4 extends Level {
     }
 
 }
-

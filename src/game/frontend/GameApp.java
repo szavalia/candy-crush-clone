@@ -1,16 +1,13 @@
 package game.frontend;
 
 import game.backend.CandyGame;
-import game.backend.level.Level1;
-import game.backend.level.Level2;
-import game.backend.level.Level3;
-import game.backend.level.Level4;
-import game.backend.level.Level5;
+import game.backend.level.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 public class GameApp extends Application {
@@ -27,14 +24,19 @@ public class GameApp extends Application {
 		Button level3 = new Button("Level 3");
 		Button level4 = new Button("Level 4");
 		Button level5 = new Button("Level 5");
+		Button level6 = new Button("Level Oculto");
 		Label label1 = new Label("Menu de inicio. elija el nivel:");
 
 		VBox layout = new VBox(20);
 		VBox layout2 = new VBox();
-		layout.getChildren().addAll(label1, level1, level2, level3, level4, level5);
+		layout.getChildren().addAll(label1, level1, level2, level3, level4, level5, level6);
 
 		Scene scene = new Scene(layout, 300, 250);
 		Scene scene2 = new Scene(layout2);
+
+		BackgroundImage bI = new BackgroundImage(new Image("images/valchar.jpg"),BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(300, 250,false, false, false, false));
+		Background back = new Background(bI);
+		layout.setBackground(back);
 
 		Stage secStage = new Stage();
 		level1.setOnAction(e -> {secStage.setScene(scene2);
@@ -56,8 +58,12 @@ public class GameApp extends Application {
 			startSpecial(secStage, Level4.class);
 		});
 		level5.setOnAction(e -> {secStage.setScene(scene2);
-			secStage.setTitle("Level 1");
+			secStage.setTitle("Level 5");
 			startSpecial(secStage, Level5.class);
+		});
+		level6.setOnAction(e -> {secStage.setScene(scene2);
+			secStage.setTitle("Level Oculto");
+			startSpecial(secStage, LevelOculto.class);
 		});
 
 		primaryStage.setScene(scene);

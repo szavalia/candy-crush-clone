@@ -53,7 +53,15 @@ public class BoardPanel extends TilePane {
 		spotLight.setElevation(100);
 		Lighting lighting = new Lighting(spotLight);
 		cells[row][column].setEffect(lighting);
+	}
 
+	public void setEffect(int row, int column, Image image, Color color){
+		setImage(row, column , image);
+		Light.Distant spotLight = new Light.Distant();
+		spotLight.setColor(color);
+		spotLight.setElevation(100);
+		Lighting lighting = new Lighting(spotLight);
+		cells[row][column].setEffect(lighting);
 	}
 
 }

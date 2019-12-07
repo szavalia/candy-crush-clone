@@ -2,8 +2,6 @@ package game.backend.level;
 
 import game.backend.GameState;
 import game.backend.element.Candy;
-import game.backend.element.CandyColor;
-import game.backend.element.Element;
 import game.backend.element.JailedCandy;
 
 public class Level5 extends Level {

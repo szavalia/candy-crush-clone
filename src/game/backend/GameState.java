@@ -6,7 +6,7 @@ public abstract class GameState {
 	private int moves = 0;
 	protected int aux = 0;
 
-	public void addScore(long value) {
+	void addScore(long value) {
 		this.score = this.score + value;
 	}
 
@@ -18,7 +18,7 @@ public abstract class GameState {
 		moves++;
 	}
 
-	public int getMoves() {
+	protected int getMoves() {
 		return moves;
 	}
 
@@ -33,5 +33,7 @@ public abstract class GameState {
 	public void setAux(int value){
 		aux = value;
 	}
+
+	public void updateAux(){}
 
 }

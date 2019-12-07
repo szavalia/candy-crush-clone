@@ -1,9 +1,7 @@
 package game.backend.cell;
 
 import game.backend.Grid;
-import game.backend.element.BreakableElement;
 import game.backend.element.Element;
-import game.backend.element.JailedCandy;
 import game.backend.element.Nothing;
 import game.backend.element.*;
 import game.backend.move.Direction;
@@ -13,13 +11,14 @@ public class Cell {
 	private Grid grid;
 	private Cell[] around = new Cell[Direction.values().length];
 	private Element content;
-	
+	private boolean wall;
 	public Cell(Grid grid) {
 		this.grid = grid;
 		this.content = new Nothing();
 		this.golden = false;
+		this.wall = false;
 	}
-	
+
 	public void setAround(Cell up, Cell down, Cell left, Cell right) {
 		this.around[Direction.UP.ordinal()] = up;
 		this.around[Direction.DOWN.ordinal()] = down;
@@ -47,6 +46,9 @@ public class Cell {
 
 		if (!(content instanceof Fruit)) {
 			if ((content.isMovable() || !content.canExplode())) {
+				if(content instanceof SpecialCandy){
+					wallOff();
+				}
 				Direction[] explosionCascade = content.explode();
 				grid.cellExplosion(content);
 				this.content = new Nothing();
@@ -54,9 +56,6 @@ public class Cell {
 					expandExplosion(explosionCascade);
 				}
 				this.content = new Nothing();
-			} else if (content.isBreakable()) {
-				BreakableElement aux = (BreakableElement) this.content;
-				this.content = aux.drop();
 			}
 		}
 		else {
@@ -76,7 +75,8 @@ public class Cell {
 	}
 	
 	private void explode(Direction d) {
-		if (content.canExplode() ){
+		if (content.canExplode()){
+			wallOff();
 			clearContent();
 		}
 		if (this.around[d.ordinal()] != null)
@@ -104,7 +104,8 @@ public class Cell {
 				Cell down = around[Direction.DOWN.ordinal()];
 				return down.fallUpperContent();
 			}
-		} 
+		}
+		grid.wasUpdated();
 		return false;
 	}
 
@@ -115,5 +116,9 @@ public class Cell {
 	public void setContent(Element content) {
 		this.content = content;
 	}
+	public void wallOn(){ wall = true; }
 
+	public void wallOff(){ wall = false;}
+
+	public boolean hasWall(){return wall; }
 }

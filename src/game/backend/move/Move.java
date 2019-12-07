@@ -36,6 +36,7 @@ public abstract class Move {
 	
 	protected void clearContent(int i, int j) { //CambioValchar los moves son explosiones
 		if (grid.get(i, j).canExplode()) {
+			grid.getCell(i,j).wallOff();
 			grid.clearContent(i, j);
 		}
 	}

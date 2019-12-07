@@ -7,7 +7,7 @@ import game.backend.cell.Cell;
 import game.backend.element.*;
 
 public class Level3 extends Level {
-    private final int CANT_FRUITS = 60;
+    private final int CANT_FRUITS = 6;
     private final int MAX_MOVES = 20;
 
     @Override

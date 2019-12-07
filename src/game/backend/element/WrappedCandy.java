@@ -2,7 +2,7 @@ package game.backend.element;
 
 import game.backend.move.Direction;
 
-public class WrappedCandy extends Candy {
+public class WrappedCandy extends SpecialCandy {
 	
 	private Direction[] explosion = new Direction[4];
 	

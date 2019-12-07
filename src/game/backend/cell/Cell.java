@@ -46,6 +46,9 @@ public class Cell {
 
 		if (!(content instanceof Fruit)) {
 			if ((content.isMovable() || !content.canExplode())) {
+				if(content instanceof SpecialCandy){
+					wallOff();
+				}
 				Direction[] explosionCascade = content.explode();
 				grid.cellExplosion(content);
 				this.content = new Nothing();

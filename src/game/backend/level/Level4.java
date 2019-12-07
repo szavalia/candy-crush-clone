@@ -52,7 +52,7 @@ public class Level4 extends Level {
             int i, j, total = 0;
             for (i = 0; i < WALLHEIGHT; i++) {
                 for (j = 0; j < WALLWIDTH; j++) {
-                    if (g()[WALLCENTER - (WALLHEIGHT) / 2 + i][WALLCENTER - (WALLWIDTH) / 2 + j].hasWall()); {
+                    if (g()[WALLCENTER - (WALLHEIGHT) / 2 + i][WALLCENTER - (WALLWIDTH) / 2 + j].hasWall()) {
                         total++;
                     }
                 }

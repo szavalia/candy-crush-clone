@@ -5,7 +5,6 @@ import game.backend.element.CandyColor;
 import game.backend.element.Cherry;
 import game.backend.element.Element;
 import game.backend.element.Hazelnut;
-import game.backend.level.Level3;
 
 public class CandyGeneratorCellExtended extends CandyGeneratorCell {
     private int cantCherrys;

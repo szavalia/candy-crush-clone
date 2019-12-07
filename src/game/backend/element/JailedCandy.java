@@ -8,7 +8,7 @@ public class JailedCandy extends Candy {
     }
 
     @Override
-    public boolean isMovable(){ return false; };
+    public boolean isMovable(){ return false; }
 
     @Override
     public String getFullKey(){ return getKey(); }

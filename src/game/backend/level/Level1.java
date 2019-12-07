@@ -30,15 +30,15 @@ public class Level1 extends Level {
 	
 	private class Level1State extends GameState {
 		private long requiredScore;
-		private long maxMoves;
 		
 		public Level1State(long requiredScore, int maxMoves) {
 			this.requiredScore = requiredScore;
 			this.maxMoves = maxMoves;
+			this.aux = - 1;
 		}
 		
 		public boolean gameOver() {
-			return playerWon() || getMoves() >= maxMoves;
+			return playerWon() || getMoves() <= 0;
 		}
 		
 		public boolean playerWon() {

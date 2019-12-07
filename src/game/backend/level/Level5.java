@@ -6,16 +6,16 @@ import game.backend.element.JailedCandy;
 
 public class Level5 extends Level {
     private static int CENTER = SIZE/2;
-
+    private static int MAXMOVES = 30;
     @Override
-    public GameState newState(){ return new Level5State( SIZE -1 , 25); }
+    public GameState newState(){ return new Level5State( SIZE -1 , MAXMOVES); }
 
 
     @Override
     public void initialize(){
         super.initialize();
         generateJails();
-        state().setAux(0);
+        state().updateAux();
         wasUpdated();
     }
 
@@ -24,7 +24,7 @@ public class Level5 extends Level {
         boolean ret;
         if (ret = super.tryMove(i1, j1, i2, j2)) {
             state().addMove();
-            state().setAux(0);
+            state().updateAux();
         }
         return ret;
     }
@@ -41,26 +41,24 @@ public class Level5 extends Level {
     }
 
     private class Level5State extends GameState {
-
-        private int maxMoves;
         public Level5State(int jailNumber , int maxMoves) {
           aux = jailNumber;
           this.maxMoves = maxMoves;
         }
 
         @Override
-        public void setAux( int value ){
-            int i;
+        public void updateAux(){
+            int i, total = 0;
             for ( i = 0 ; i < SIZE ; i++){
                 if ( g()[CENTER][i].getContent() instanceof JailedCandy ){
-                    value +=1;
+                    total +=1;
                 }
             }
-            aux = value;
+            aux = total;
         }
 
         public boolean gameOver() {
-            return playerWon() || getMoves() >= maxMoves;
+            return playerWon() || getMoves() <= 0;
         }
 
         public boolean playerWon() {

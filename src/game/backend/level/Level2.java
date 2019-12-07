@@ -55,7 +55,6 @@ public class Level2 extends Level {
     }
 
     private class Level2State extends GameState {
-        private long maxMoves;
         private int actualGoldens;
         public Level2State(int maxMoves, int totalGoldens ) {
             this.maxMoves = maxMoves;
@@ -86,7 +85,7 @@ public class Level2 extends Level {
             aux = SIZE * SIZE - actualGoldens;
         }
         public boolean gameOver() {
-            return playerWon() || getMoves() >= maxMoves;
+            return playerWon() || getMoves() <= 0;
         }
 
         public boolean playerWon() {

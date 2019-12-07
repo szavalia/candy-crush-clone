@@ -79,7 +79,10 @@ public class CandyFrame extends VBox {
 				//
 			}
 		});
-		scorePanel.updateAux(Integer.toString(game.getAux()));
+		scorePanel.updateMove("Moves : " + Integer.toString(game().getMoves()));
+		if(game().getAux() >= 0) {
+			scorePanel.updateAux("Especiales : " + Integer.toString(game.getAux()));
+		}
 		listener.gridUpdated();
 
 		addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
@@ -94,14 +97,18 @@ public class CandyFrame extends VBox {
 					String message = ((Long)game().getScore()).toString();
 					if (game().isFinished()) {
 						if (game().playerWon()) {
-							message = message + " Finished - Player Won!";
+							message = message + " Finished - Player Won! ";
 						} else {
-							message = message + " Finished - Loser !";
+							message = message + " Finished - Loser ! ";
 						}
 					}
-					scorePanel.updateScore(message);
-					scorePanel.updateMove(Integer.toString(game.getMoves()));
-					scorePanel.updateAux(Integer.toString(game.getAux()));
+					scorePanel.updateScore("Score : " + message);
+					if(game().getMoves() >= 0) {
+						scorePanel.updateMove("Moves : " + Integer.toString(game.getMoves()));
+					}
+					if(game.getAux() >= 0){
+						scorePanel.updateAux("Especiales : " + Integer.toString(game.getAux()));
+					}
 					lastPoint = null;
 				}
 			}

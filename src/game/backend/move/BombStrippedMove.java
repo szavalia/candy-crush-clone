@@ -1,11 +1,7 @@
 package game.backend.move;
 
 import game.backend.Grid;
-import game.backend.element.Bomb;
-import game.backend.element.Candy;
-import game.backend.element.CandyColor;
-import game.backend.element.HorizontalStripedCandy;
-import game.backend.element.VerticalStripedCandy;
+import game.backend.element.*;
 
 public class BombStrippedMove extends Move {
 
@@ -19,7 +15,8 @@ public class BombStrippedMove extends Move {
 		CandyColor color = candy.getColor();
 		for(int i = 0; i < Grid.SIZE; i++) {
 			for(int j = 0; j < Grid.SIZE; j++) {
-				if (candy.equals(get(i, j))) {
+				if (candy.equals(get(i, j)) && !(get(i,j) instanceof JailedCandy) )
+				{
 					setContent(i, j, createStriped(color));
 				}
 			}

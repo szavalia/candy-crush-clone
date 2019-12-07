@@ -55,14 +55,6 @@ public class Cell {
 			}
 			this.content = new Nothing();
 		}
-		//else {
-		//	while (content instanceof Fruit) {
-		//		if ((this.around[Direction.DOWN.ordinal()].content) instanceof Wall) { //y abajo tiene una Wall
-		//			this.content = new Nothing(); //borrala
-		//			fallUpperContent();
-		//		}
-		//	}
-		//}
 	}
 	
 	private void expandExplosion(Direction[] explosion) {
@@ -102,7 +94,7 @@ public class Cell {
 				return down.fallUpperContent();
 			}
 		}
-		if( !up.isMovable()) {
+		if( up.getContent() instanceof JailedCandy ) {
 			grid.wasUpdated();
 		}
 		return false;

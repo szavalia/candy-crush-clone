@@ -31,34 +31,35 @@ public class GameApp extends Application {
 		VBox layout2 = new VBox();
 		layout.getChildren().addAll(label1, level1, level2, level3, level4, level5);
 
-		Scene scene = new Scene(layout, 300, 250);
+		Scene scene = new Scene(layout, 250, 300);
 		Scene scene2 = new Scene(layout2);
 
-		BackgroundImage bI = new BackgroundImage(new Image("images/valchar.jpg"),BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(300, 250,false, false, false, false));
+		BackgroundImage bI = new BackgroundImage(new Image("images/Background.png"),BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, new BackgroundSize(250, 300,false, false, false, false));
 		Background back = new Background(bI);
 		layout.setBackground(back);
 
 		Stage secStage = new Stage();
 		level1.setOnAction(e -> {secStage.setScene(scene2);
-			secStage.setTitle("Level 1");
+			secStage.setTitle("Level 1 - nivel base");
 			startSpecial(secStage, Level1.class);
 		});
 
 		level2.setOnAction(e -> {secStage.setScene(scene2);
-			secStage.setTitle("Level 2");
+			secStage.setTitle("Level 2- Golden Grid");
 			startSpecial(secStage, Level2.class);
 		});
 
         level3.setOnAction(e -> {secStage.setScene(scene2);
+			secStage.setTitle("Level 3 - Fruit");
             startSpecial(secStage, Level3.class);
         });
 
 		level4.setOnAction(e -> {secStage.setScene(scene2);
-			secStage.setTitle("Level 4");
+			secStage.setTitle("Level 4 - Wall");
 			startSpecial(secStage, Level4.class);
 		});
 		level5.setOnAction(e -> {secStage.setScene(scene2);
-			secStage.setTitle("Level 5");
+			secStage.setTitle("Level 5 - Jail");
 			startSpecial(secStage, Level5.class);
 		});
 

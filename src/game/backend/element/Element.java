@@ -24,6 +24,6 @@ public abstract class Element {
 		return 0;
 	}
 
-	public boolean canExplode(){return true; };
+	public boolean canExplode(){return true; }
 	
 }

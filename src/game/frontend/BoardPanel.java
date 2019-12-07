@@ -31,28 +31,10 @@ public class BoardPanel extends TilePane {
 		cells[row][column].setEffect(null);
 	}
 
-	public void setWallImage(int row, int column, Image image) {
-		setImage( row , column , image );
-		Light.Distant spotLight = new Light.Distant();
-		spotLight.setColor(Color.SANDYBROWN);
-		spotLight.setElevation(100);
-		Lighting lighting = new Lighting(spotLight);
-		cells[row][column].setEffect(lighting);
-	}
-
 	public void setJailImage( int row , int column , Image image , Image Jail){
 		setImage(row , column , image );
 		cells[row][column].getChildren().add(new ImageView(Jail));
 
-	}
-
-	public void setGoldenImage( int row, int column, Image image){
-		setImage(row, column , image);
-		Light.Distant spotLight = new Light.Distant();
-		spotLight.setColor(Color.YELLOW);
-		spotLight.setElevation(100);
-		Lighting lighting = new Lighting(spotLight);
-		cells[row][column].setEffect(lighting);
 	}
 
 	public void setEffect(int row, int column, Image image, Color color){

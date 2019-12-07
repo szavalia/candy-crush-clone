@@ -1,7 +1,6 @@
 package game.backend.level;
 
 import game.backend.GameState;
-import game.backend.cell.CandyGeneratorCell;
 import game.backend.cell.CandyGeneratorCellExtended;
 import game.backend.cell.Cell;
 import game.backend.element.*;

@@ -1,6 +1,7 @@
 package game.backend.level;
 
 import game.backend.GameState;
+import game.backend.cell.CandyGeneratorCell;
 import game.backend.cell.CandyGeneratorCellExtended;
 import game.backend.cell.Cell;
 import game.backend.element.*;
@@ -25,59 +26,44 @@ public class Level3 extends Level {
     @Override
     public void initialize() {
         super.initialize();
-        while ( illegalFruits() ){
-            deleteIllegalFruits();
+        int decrease;
+        while ( (decrease = lastLineFruits()) != 0 ) {
+            CandyGeneratorCellExtended aux = (CandyGeneratorCellExtended) candyGenCell;
+            aux.decreaseFruits();
         }
-        checkFruits();
     }
 
-    private void deleteIllegalFruits(){
+    private int lastLineFruits(){
+        int collectedFruits = 0;
         for(int j = 0; j < SIZE; j++){
-            while(g()[SIZE-1][j].getContent() instanceof Fruit){
+            if(g()[SIZE-1][j].getContent() instanceof Fruit){
                 g()[SIZE-1][j].setContent(new Nothing());
-                CandyGeneratorCellExtended aux = (CandyGeneratorCellExtended) candyGenCell;
-                aux.decreaseFruits();
-                fallElements();
+                collectedFruits++;
             }
         }
-    }
-
-    private boolean illegalFruits(){
-        for ( int j = 0; j < SIZE ; j++){
-            if (g()[SIZE-1][j].getContent() instanceof Fruit){
-                return true;
-            }
-        }
-        return false;
+        fallElements();
+        return collectedFruits;
     }
 
     @Override
     public boolean tryMove(int i1, int j1, int i2, int j2) {
         boolean ret;
+        int decrease;
         if(!(get(i1,j1) instanceof Fruit) || !(get(i2,j2) instanceof Fruit)) {
             if (ret = super.tryMove(i1, j1, i2, j2)) { // es un movimiento valido
                 state().addMove();
+                while((decrease = lastLineFruits()) != 0){
+                    state().setAux(state().getAux() - decrease);
+                }
             }
+
         }
         else{
             ret = false;
         }
-        System.out.printf("Valor de ret : %s", ret);
-        checkFruits(); //fijate si me quedaron frutas al fondo y agregalas al aux de GameState
         return ret;
     }
-    private void checkFruits(){
-        int j;
-        int collectedFruits = 0;
-        for(j = 0; j < SIZE; j++){
-            if(get(SIZE-1, j) instanceof Fruit){
-                g()[SIZE-1][j].clearContent();
-                collectedFruits++;
-            }
-        }
-        state().setAux(state().getAux() - collectedFruits);
-        fallElements();
-    }
+
         private class Level3State extends GameState{
         private int maxMoves;
         //score es la cantidad de frutas que baje, esto me queda exactamente igual al del level1!

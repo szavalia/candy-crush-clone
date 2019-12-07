@@ -43,29 +43,26 @@ public class Cell {
 	}
 	
 	public void clearContent() {
-
-		if (!(content instanceof Fruit)) {
-			if ((content.isMovable() || !content.canExplode())) {
-				if(content instanceof SpecialCandy){
-					wallOff();
-				}
-				Direction[] explosionCascade = content.explode();
-				grid.cellExplosion(content);
-				this.content = new Nothing();
-				if (explosionCascade != null) {
-					expandExplosion(explosionCascade);
-				}
-				this.content = new Nothing();
+		if ((content.isMovable() || !content.canExplode())) {
+			if(content instanceof SpecialCandy){
+				wallOff();
 			}
-		}
-		else {
-			while (content instanceof Fruit) {
-				if ((this.around[Direction.DOWN.ordinal()].content) instanceof Wall) { //y abajo tiene una Wall
-					this.content = new Nothing(); //borrala
-					fallUpperContent();
-				}
+			Direction[] explosionCascade = content.explode();
+			grid.cellExplosion(content);
+			this.content = new Nothing();
+			if (explosionCascade != null) {
+				expandExplosion(explosionCascade);
 			}
+			this.content = new Nothing();
 		}
+		//else {
+		//	while (content instanceof Fruit) {
+		//		if ((this.around[Direction.DOWN.ordinal()].content) instanceof Wall) { //y abajo tiene una Wall
+		//			this.content = new Nothing(); //borrala
+		//			fallUpperContent();
+		//		}
+		//	}
+		//}
 	}
 	
 	private void expandExplosion(Direction[] explosion) {

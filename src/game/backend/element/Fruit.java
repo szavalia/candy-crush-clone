@@ -5,4 +5,9 @@ public abstract class Fruit extends Element {
     public boolean isMovable() {
         return true;
     }
+
+    @Override
+    public boolean canExplode() {
+        return false;
+    }
 }

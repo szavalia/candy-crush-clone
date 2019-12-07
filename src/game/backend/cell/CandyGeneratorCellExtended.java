@@ -24,7 +24,7 @@ public class CandyGeneratorCellExtended extends CandyGeneratorCell {
     @Override
     public Element getContent() {
         boolean returnFruit = false;
-        int i = (int)(Math.random() * (CandyColor.values().length + 1)); //Tomo al elemento Fruit como un tipo de caramelo más
+        int i = (int)(Math.random() * ((CandyColor.values().length) + 1)); //Tomo al elemento Fruit como un tipo de caramelo más
         if (i == CandyColor.values().length){
             returnFruit = true; //dame una fruta
         }

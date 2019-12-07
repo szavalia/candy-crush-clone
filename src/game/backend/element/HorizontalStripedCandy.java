@@ -4,9 +4,8 @@ import game.backend.move.Direction;
 
 public class HorizontalStripedCandy extends SpecialCandy {
 	
-	private Direction[] explosion = new Direction[2];
-	
 	public HorizontalStripedCandy() {
+		Direction[] explosion = new Direction[2];
 		explosion[0] = Direction.LEFT;
 		explosion[1] = Direction.RIGHT;
 	}
@@ -20,12 +19,7 @@ public class HorizontalStripedCandy extends SpecialCandy {
 	public String getFullKey() {
 		return "HORIZ-STRIPED-" + super.getFullKey();
 	}
-	
-	@Override
-	public Direction[] explode() {
-		return explosion;
-	}
-	
+
 	@Override
 	public long getScore() {
 		return 80;

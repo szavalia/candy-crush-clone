@@ -97,13 +97,16 @@ public class CandyFrame extends VBox {
 					String message = ((Long) game().getScore()).toString();
 					if (game().isFinished()) {
 						if (game().playerWon()) {
-							message = message + " Finished - Player Won! ";
+							message =  "Finished - Player Won! ";
 						} else {
-							message = message + " Finished - Loser ! ";
+							message =  "Finished - Loser !";
 						}
 					}
 					if (!game().isFinished()) {
 						scorePanel.updateScore("Score : " + message);
+					}
+					else{
+						scorePanel.updateScore(message);
 					}
 					if(game().getMoves() >= 0) {
 						scorePanel.updateMove("Moves : " + Integer.toString(game.getMoves()));

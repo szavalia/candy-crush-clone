@@ -39,9 +39,6 @@ public class Level4 extends Level {
     }
 
     private class Level4State extends GameState {
-
-        private long maxMoves;
-
         private Level4State(int maxMoves, int walls ) {
             this.maxMoves = maxMoves;
             aux = walls;

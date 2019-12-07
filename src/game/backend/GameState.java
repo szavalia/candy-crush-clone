@@ -2,6 +2,7 @@ package game.backend;
 
 public abstract class GameState {
 
+	protected int maxMoves = 0;
 	private long score = 0;
 	private int moves = 0;
 	protected int aux = 0;
@@ -19,7 +20,7 @@ public abstract class GameState {
 	}
 
 	protected int getMoves() {
-		return moves;
+		return maxMoves - moves;
 	}
 
 	public abstract boolean gameOver();

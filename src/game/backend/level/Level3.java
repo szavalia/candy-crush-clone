@@ -1,7 +1,6 @@
 package game.backend.level;
 
 import game.backend.GameState;
-import game.backend.cell.CandyGeneratorCell;
 import game.backend.cell.CandyGeneratorCellExtended;
 import game.backend.cell.Cell;
 import game.backend.element.*;
@@ -65,7 +64,6 @@ public class Level3 extends Level {
     }
 
         private class Level3State extends GameState{
-        private int maxMoves;
         //score es la cantidad de frutas que baje, esto me queda exactamente igual al del level1!
         public Level3State(int maxMoves, int requiredFruits) {
                 this.maxMoves = maxMoves;
@@ -74,7 +72,7 @@ public class Level3 extends Level {
 
         @Override
         public boolean gameOver() {
-            return playerWon() || maxMoves < getMoves();
+            return playerWon() || getMoves() <= 0;
             }
 
         @Override

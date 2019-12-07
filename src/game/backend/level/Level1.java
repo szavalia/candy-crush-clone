@@ -1,10 +1,6 @@
 package game.backend.level;
 
 import game.backend.GameState;
-import game.backend.Grid;
-import game.backend.cell.CandyGeneratorCell;
-import game.backend.cell.Cell;
-import game.backend.element.Wall;
 
 public class Level1 extends Level {
 	
@@ -30,15 +26,15 @@ public class Level1 extends Level {
 	
 	private class Level1State extends GameState {
 		private long requiredScore;
-		private long maxMoves;
 		
 		public Level1State(long requiredScore, int maxMoves) {
 			this.requiredScore = requiredScore;
 			this.maxMoves = maxMoves;
+			this.aux = - 1;
 		}
 		
 		public boolean gameOver() {
-			return playerWon() || getMoves() >= maxMoves;
+			return playerWon() || getMoves() <= 0;
 		}
 		
 		public boolean playerWon() {

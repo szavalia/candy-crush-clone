@@ -1,7 +1,6 @@
 package game.backend.cell;
 
 import game.backend.Grid;
-import game.backend.element.BreakableElement;
 import game.backend.element.Element;
 import game.backend.element.Nothing;
 import game.backend.element.*;
@@ -54,9 +53,6 @@ public class Cell {
 					expandExplosion(explosionCascade);
 				}
 				this.content = new Nothing();
-			} else if (content.isBreakable()) {
-				BreakableElement aux = (BreakableElement) this.content;
-				this.content = aux.drop();
 			}
 		}
 		else {

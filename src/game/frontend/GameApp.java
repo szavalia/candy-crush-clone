@@ -24,12 +24,12 @@ public class GameApp extends Application {
 		Button level3 = new Button("Level 3");
 		Button level4 = new Button("Level 4");
 		Button level5 = new Button("Level 5");
-		Button level6 = new Button("Level Oculto");
+
 		Label label1 = new Label("Menu de inicio. elija el nivel:");
 
 		VBox layout = new VBox(20);
 		VBox layout2 = new VBox();
-		layout.getChildren().addAll(label1, level1, level2, level3, level4, level5, level6);
+		layout.getChildren().addAll(label1, level1, level2, level3, level4, level5);
 
 		Scene scene = new Scene(layout, 300, 250);
 		Scene scene2 = new Scene(layout2);
@@ -61,10 +61,7 @@ public class GameApp extends Application {
 			secStage.setTitle("Level 5");
 			startSpecial(secStage, Level5.class);
 		});
-		level6.setOnAction(e -> {secStage.setScene(scene2);
-			secStage.setTitle("Level Oculto");
-			startSpecial(secStage, LevelOculto.class);
-		});
+
 
 		primaryStage.setScene(scene);
 		primaryStage.show();

@@ -3,7 +3,6 @@ package game.frontend;
 import game.backend.CandyGame;
 import game.backend.GameListener;
 import game.backend.cell.Cell;
-import game.backend.element.BreakableElement;
 import game.backend.element.Candy;
 import game.backend.element.Element;
 import game.backend.element.JailedCandy;

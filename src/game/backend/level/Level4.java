@@ -1,7 +1,6 @@
 package game.backend.level;
 
 import game.backend.GameState;
-import game.backend.element.BreakableWall;
 
 
 public class Level4 extends Level {
